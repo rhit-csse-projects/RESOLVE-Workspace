@@ -1,0 +1,32 @@
+Facility Activity_103_Reasoning_about_Swapping;
+	uses Integer_Template;
+	-- Swap operator is efficient for all data types and facilitates ease of reasoning
+
+	-- Basics
+	-- Activity 1: Click on MP-Prove to reason about this code
+
+	-- Guided
+	-- Activity 2a: Uncomment Remember and Confirm statements by removing -- and prove
+	-- Activity 2b: Change Confirm statements in various ways (e.g., I = #I) and attempt to prove
+	
+	-- Inquiry
+	-- Activity 3+: Introduce new variables and explore combinations of swap statements
+	-- Activity 4+: Compare assignment statements and swap statements
+
+	Operation Main();
+	Procedure
+		Var I, J: Integer;
+		
+		Read(I);
+		Read(J);
+		Remember;	-- remembers the values of I and J here as #I and #J
+		
+		I :=: J;	-- this is a swap statement available on all types of objects
+		
+		Confirm I = #J;  --- this is an assertion
+		Confirm J = #I; 
+		
+		Write_Line(I);
+		Write_Line(J);
+	end Main;
+end Activity_103_Reasoning_about_Swapping;

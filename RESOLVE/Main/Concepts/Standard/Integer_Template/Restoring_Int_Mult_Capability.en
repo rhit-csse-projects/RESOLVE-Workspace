@@ -1,0 +1,8 @@
+Enhancement Restoring_Int_Mult_Capability for Integer_Template;
+	uses Natural_Number_Theory;
+
+	Operation Multiply(restores I: Integer; updates J: Integer);
+		requires (0 <= I) and (min_int <= I * J) and (I * J <= max_int);
+		ensures J = I * #J;
+
+end Restoring_Int_Mult_Capability;

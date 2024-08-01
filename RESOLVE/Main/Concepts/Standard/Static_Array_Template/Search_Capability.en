@@ -1,0 +1,22 @@
+Enhancement Search_Capability(definition LEQ(x,y: Entry): B)
+            for Static_Array_Template;
+
+	uses Basic_Properties, Integer_Template;
+      --requires Is_Total_Preordering(LEQ);-- transitive, total, and antisymmetric
+      requires Is_Transitive(LEQ) and Is_Total(LEQ) and Is_Antisymmetric(LEQ);
+      
+    Operation Search(restores key: Entry; restores A: Static_Array): Integer;
+    	requires Is_Ordered(A, Lower_Bound, Upper_Bound,LEQ) and 
+    	min_int + 1 <= Lower_Bound and Upper_Bound + 1 <= max_int;
+    	ensures ((Lower_Bound <= Search and Search <= Upper_Bound)
+    			 = Exists_Between(A,key,Lower_Bound,Upper_Bound,LEQ))
+    			 and
+    			 (Exists_Between(A,key,Lower_Bound,Upper_Bound,LEQ) implies
+    			 (LEQ(A(Search),key) and LEQ(key,A(Search)))
+    			 );
+    	 
+    	 -- should say exists between = search in bounds and A(search) = key
+    	 -- not exists between = search out of bounds, and don't know if A(search) = key
+    	 -- (eb = in bounds) and
+    	 -- eb implies a(s) = key
+end Search_Capability;

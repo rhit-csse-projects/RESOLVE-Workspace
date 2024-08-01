@@ -1,0 +1,89 @@
+Facility Activity_102_Reasoning_about_Design_by_Contract;
+	uses Integer_Template;
+
+(*
+	-- This is a short intro to design by contract (specification)
+
+	-- Basics
+	-- Activity 1a: Understand the specification and code of Exchange
+		-- The specification is the contract, it appears on lines 21 and 22
+		-- Exchange's code appears on lines 23 - 29 
+		-- Ignore operations Op_1 through Op_4 for now
+	-- Activity 1b: Understand the call to Exchange in Main which appears on line 71
+	-- Activity 1c: Click on MP-Prove to reason about this code
+		-- You will see that 7 VCs will be proved and 2 will not prove
+		-- The 2 that do not prove are for Op_1 and Op_2
+		-- Activity 2 below asks you to correct this problem
+
+	-- Guided:
+	-- Activity 2: Write code for operations to satisfy the contracts of Op_1 and Op_2 and verify
+	-- Activity 3: Write contracts for operations Op_3 and Op_4 to capture what their code does and verify
+
+    -- Inquiry
+	-- Activity 4+: Compare various contracts
+	--              Understand the basics of design-by-contract responsibilities for implementers and benefits for callers
+*)
+
+	Operation Exchange (updates I: Integer; updates J: Integer);    -- specification: the parameters are modified purposefully as stated next
+		ensures I = #J and J = #I;                                  -- specification: what this operation should do; #I and #J denote incoming values
+	Procedure                                                       -- from here is code
+		Var Temp: Integer;
+		
+		Temp := I;
+		I := J;
+		J := Temp;
+	end Exchange;
+
+	Operation Op_1 (updates I: Integer; updates J: Integer); 
+		ensures I = #I and J = #I;                                
+	Procedure                                                       
+		-- Insert code here so that the ensures clause is satisfied.
+		-- Then click MP-Prove to verify your code.
+	end Op_1;
+
+	Operation Op_2 (restores I: Integer; updates J: Integer);       -- restores mode specification is a shorthand for ensuring I = #I
+		ensures J = #I;                                
+	Procedure                                                      
+		-- Insert code here so that the ensures clause is satisfied.
+		-- Then click MP-Prove to verify your code.
+	end Op_2;
+
+	Operation Op_3 (updates I: Integer; updates J: Integer);       -- restores mode specification is a shorthand for ensuring I = #I
+		-- the default is ensures true so this code will verify
+		-- write a suitable ensures clause to capture what the code does
+	Procedure                                                       
+		I := J;
+		J := I;
+	end Op_3;
+
+	Operation Op_4 (updates I: Integer; updates J: Integer);       -- restores mode specification is a shorthand for ensuring I = #I
+		-- the default is ensures true so this code will verify
+		-- write a suitable ensures clause to capture what the code does
+	Procedure                                                      
+		Var Temp: Integer;
+
+		Temp := I;
+		Temp := J;
+		I := Temp;
+		J := Temp;
+	end Op_4;
+
+	Operation Main();
+	Procedure
+		Var X, Y: Integer;
+		
+		Write_Line("Input two numbers");
+		Read(X);
+		Read(Y);
+		
+		Exchange(X, Y);             -- caller assumes that the operation works according to specification
+		
+		Write("The first number is: ");
+		Write_Line(X);
+		Write_Line("------------");
+		Write("The second number is: ");
+		Write_Line(Y);
+		Write_Line("------------");
+	end Main;
+
+end Activity_102_Reasoning_about_Design_by_Contract;

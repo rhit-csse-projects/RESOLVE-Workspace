@@ -1,0 +1,6 @@
+Enhancement Int_Max_Capability for Integer_Template;
+
+	Operation Find_Max(restores I: Integer; restores J: Integer; replaces K: Integer);
+		ensures (K = I or K = J) and (K >= I and K >= J);
+
+end Int_Max_Capability;

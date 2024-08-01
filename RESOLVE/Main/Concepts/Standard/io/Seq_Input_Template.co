@@ -1,0 +1,13 @@
+Concept Seq_Input_Template;
+
+	Type Family Seq_Input is modeled by B;
+		exemplar f;
+	end;
+	
+	Operation Open_Read_File(evaluates f: Char_Str): Seq_Input;
+	
+	Operation Read_Line_From_File(evaluates br: Seq_Input): Char_Str;
+	
+	Operation Close_Read_File(evaluates br: Seq_Input);
+
+end Seq_Input_Template;

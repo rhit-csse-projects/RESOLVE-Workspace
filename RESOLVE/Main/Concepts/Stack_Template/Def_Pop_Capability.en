@@ -1,0 +1,9 @@
+Enhancement Def_Pop_Capability for Stack_Template;
+    uses Natural_Number_Theory, String_Theory;
+
+    Operation Def_Pop (replaces R: Entry; updates S: Stack; replaces empty: Boolean);
+        ensures empty = ( |#S| = 0 ) and 
+                ( |#S| = 0 implies S = Empty_String ) and
+                ( |#S| /= 0 implies #S = <R> o S );
+
+end Def_Pop_Capability;

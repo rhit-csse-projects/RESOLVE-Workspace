@@ -1,0 +1,47 @@
+Concept Char_Str_Template;
+    uses String_Theory, Natural_Number_Theory, Std_Boolean_Fac, Std_Integer_Fac, Std_Character_Fac;
+
+    Definition Max_Char_Str_Len: N;
+	
+    Constraint 1 <= Max_Char_Str_Len;
+
+    Type Family Char_Str is modeled by Str(N);
+        exemplar s;
+        constraints |s| <= Max_Char_Str_Len;
+        initialization 
+		ensures s = Empty_String;
+	end;
+
+    (*Operation Char_Str_for(evaluates c: Character): Char_Str;
+        ensures Char_Str_for = ( <c> );*)
+
+    Operation Are_Equal(evaluates s1, s2: Char_Str): Boolean;
+        ensures Are_Equal = (s1 = s2);
+
+    Operation Are_Not_Equal(evaluates s1, s2: Char_Str): Boolean;
+        ensures Are_Not_Equal = (s1 /= s2);
+
+    Operation Merger(evaluates s1, s2: Char_Str): Char_Str;
+        ensures Merger = (s1 o s2);
+
+    Operation Length(evaluates s: Char_Str): Integer;
+        ensures Length = ( |s| );
+
+    Operation Replica(restores s: Char_Str): Char_Str;
+        ensures Replica = ( s );
+
+    Operation Read(replaces c: Char_Str);
+
+    Operation Write(evaluates c: Char_Str);
+
+    Operation Write_Line(evaluates c: Char_Str);
+
+-- 	Character String generator operations are included in this concept implicitly.
+-- 	The following function assignment statement, for example, 
+--		s := "   "; 
+-- 	invokes the following operation implicitly:
+--    	Operation Three_Blank_Space_Str( ): Char_Str;
+--			ensures Three_Blank_Space_Str = <32> o <32> o <32>;
+
+end Char_Str_Template;
+

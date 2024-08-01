@@ -1,0 +1,4 @@
+Enhancement Equality_Checking_Capability for Queue_Template;
+	Operation Are_Equal_Queues(restores P, Q: Queue): Boolean;
+		ensures Are_Equal_Queues = (P = Q);
+end Equality_Checking_Capability;

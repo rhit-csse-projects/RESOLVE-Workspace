@@ -1,0 +1,54 @@
+Facility Activity_105_Reasoning_about_Loops_and_Recursion;
+	uses Integer_Template;
+	-- Reasoning about code involving loops and recursion need minimal additional annotations
+	-- Activities: Understand, reason, and inquire
+	-- Uncommment the lines in Main one at a time and explore
+
+	Operation Clear_Num_0 (clears Num: Integer);    -- specification: Num is changed to initial Integer value, namely 0
+	Procedure
+		Num := 0;
+	end Clear_Num_0;
+
+	Operation Clear_Num_00 (clears Num: Integer);
+	Procedure
+		Clear(Num);     
+	end Clear_Num_00;
+
+	-- Assignment: Read Bucci's paper in ACM SIGCSE 1999 on how to reason about recursion
+	Operation Clear_Num_Recursively (clears Num: Integer);
+		requires 0 <= Num;
+	Recursive Procedure                 
+		decreasing Num;                         -- recursive procedure needs a reason for termination
+		
+		If (1 <= Num) then
+			Num := Num - 1;
+			Clear_Num_Recursively(Num);
+		end;
+	end Clear_Num_Recursively;
+
+	-- Observation: Loop invariant is an asserion about variables in a loop
+	-- Observation: Loop invariant is aupplied by the programmer 
+	-- Observation: Loop invariant must be true at the beginning an at the end of each iteration,
+	--                      including the first and the last
+	Operation Clear_Num_Iteratively (clears Num: Integer);
+		requires 0 <= Num;
+	Procedure
+		While (1 <= Num)
+			maintaining 0 <= Num <= max_int;  -- This is an invariant for this loop: Num is a non-negative Integer
+			decreasing Num;                   -- loop needs a reason for termination
+		do
+			Num := Num - 1;
+		end;
+	end Clear_Num_Iteratively;
+
+	Operation Main();
+	Procedure
+		Var X: Integer;
+		Read(X);
+		-- Clear_Num_0(X);
+		-- Clear_Num_00(X);
+		-- Clear_Num_Recursively(X);
+		-- Clear_Num_Iteratively(X);
+		Write_Line(X);
+	end Main;
+end Activity_105_Reasoning_about_Loops_and_Recursion;

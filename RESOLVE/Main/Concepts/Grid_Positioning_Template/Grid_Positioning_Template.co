@@ -1,0 +1,44 @@
+Concept Grid_Positioning_Template (evaluates Max_Top, Max_Right: Integer);
+	uses Natural_Number_Theory, Integer_Theory, Integer_Ext_Theory;
+	requires 1 <= Max_Top and 1 <= Max_Right;
+
+	Type Family Grid_Pos is modeled by
+		Cart_Prod
+			X, Y: Z;
+		end;
+		exemplar GP;
+		constraint 0 <= GP.X <= Max_Right and 0 <= GP.Y <= Max_Top;
+		initialization ensures GP.X = 0 and GP.Y= 0;
+	end;
+
+	Operation Move_Left(updates GP: Grid_Pos);
+		requires 1 <= GP.X;
+		ensures  GP.X = #GP.X - 1 and GP.Y = #GP.Y;
+
+	Operation Move_Right(updates GP: Grid_Pos);
+		requires GP.X + 1 <= Max_Right;
+		ensures  GP.X = #GP.X + 1 and GP.Y = #GP.Y;
+
+	Operation Is_OK_to_Move_Left(restores GP: Grid_Pos): Boolean;
+		ensures Is_OK_to_Move_Left = (1 <= GP.X);
+
+	Operation Is_OK_to_Move_Right(restores GP: Grid_Pos): Boolean;
+		ensures Is_OK_to_Move_Right = (GP.X + 1 <= Max_Right);
+
+	Operation Move_Down(updates GP: Grid_Pos);
+		requires 1 <= GP.Y;
+		ensures  GP.Y = #GP.Y - 1 and GP.X = #GP.X;
+
+	Operation Move_Up(updates GP: Grid_Pos);
+		requires GP.Y + 1 <= Max_Top;
+		ensures  GP.Y = #GP.Y + 1 and GP.X = #GP.X;
+
+	Operation Is_OK_to_Move_Down(restores GP: Grid_Pos): Boolean;
+		ensures Is_OK_to_Move_Down = (1 <= GP.Y);
+
+	Operation Is_OK_to_Move_Up(restores GP: Grid_Pos): Boolean;
+		ensures Is_OK_to_Move_Up = (GP.Y + 1 <= Max_Top);
+
+	Operation Clear(clears GP: Grid_Pos);
+
+end Grid_Positioning_Template;

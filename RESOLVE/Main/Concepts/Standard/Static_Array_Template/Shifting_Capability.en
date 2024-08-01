@@ -1,0 +1,6 @@
+Enhancement Shifting_Capability for Static_Array_Template;
+
+    Operation Shift_All(updates A: Static_Array);
+      ensures true;
+end Shifting_Capability;
+

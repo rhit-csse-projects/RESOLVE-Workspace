@@ -1,0 +1,10 @@
+Enhancement Defn_Do_Nothing_Capability for Stack_Template;
+	uses Natural_Number_Theory;
+
+	Definition No_Def(S: Stack): Stack = S;
+
+	Operation Do_Nothing(updates S: Stack);
+		requires (|S| <= Max_Depth) and (1 <= |S|);
+		ensures S = No_Def(#S);
+
+end Defn_Do_Nothing_Capability;

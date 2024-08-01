@@ -1,0 +1,15 @@
+Enhancement Merge_and_Sort_Capabilities(Definition LEQV(x, y : Entry) : B)
+			for Queue_Template;
+	uses String_Theory, Total_Preordering_Theory;
+	requires Is_Total_Preordering(LEQV);
+	
+	(* Note: Under Construction! *)
+
+	Operation Merge_Q(clears Q: Queue; updates R: Queue);
+		requires Is_Conformal_With(LEQV, Q) and Is_Conformal_With(LEQV, R) and
+			|Q| + |R| <= Max_Length;
+		ensures Is_Conformal_With(LEQV, R) and Is_Permutation(#Q o #R, R);
+
+	Operation Sort_Q(updates Q: Queue);
+		ensures Is_Conformal_With(LEQV, Q) and Is_Permutation(#Q,Q);
+end Merge_and_Sort_Capabilities;

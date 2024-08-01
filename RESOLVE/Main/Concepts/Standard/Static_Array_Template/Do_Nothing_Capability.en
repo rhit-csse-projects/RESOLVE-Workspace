@@ -1,0 +1,6 @@
+Enhancement Do_Nothing_Capability for Static_Array_Template;
+
+    Operation Do_Nothing(restores A: Static_Array);
+
+end Do_Nothing_Capability;
+

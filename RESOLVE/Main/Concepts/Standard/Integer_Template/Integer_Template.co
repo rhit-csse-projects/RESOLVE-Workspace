@@ -1,0 +1,109 @@
+Concept Integer_Template;
+	uses Natural_Number_Theory, Integer_Theory, Integer_Ext_Theory, Std_Boolean_Fac;
+
+    Definition min_int: Z;
+    Definition max_int: Z;
+
+    Constraint min_int <= 0 and 1 <= max_int;
+
+    Type Family Integer is modeled by Z;
+        exemplar i;
+        constraint min_int <= i <= max_int;
+        initialization ensures i = 0;
+	end;
+
+    Operation Is_Zero(evaluates i: Integer): Boolean;
+        ensures	Is_Zero = ( i = 0 );
+
+    Operation Is_Not_Zero(evaluates i: Integer): Boolean;
+        ensures	Is_Not_Zero = ( i /= 0 );
+
+    Operation Increment(updates i: Integer);
+        requires 1 + i <= max_int;
+        ensures	i = 1 + #i;
+
+    Operation Decrement(updates i: Integer);
+        requires min_int <= i - 1;
+        ensures	i = #i - 1;
+
+    Operation Less_Or_Equal(evaluates i, j: Integer): Boolean;
+        ensures	Less_Or_Equal = ( i <= j );
+
+    Operation Less(evaluates i, j: Integer): Boolean;
+        ensures Less = (1 + i <= j );
+
+    Operation Greater(evaluates i, j: Integer): Boolean;
+        ensures Greater = (1 + j <= i);
+
+    Operation Greater_Or_Equal(evaluates i, j: Integer): Boolean;
+        ensures Greater_Or_Equal = ( j <= i );
+
+    Operation Sum(evaluates i, j: Integer): Integer;
+        requires min_int <= i + j <= max_int;
+        ensures	Sum = ( i + j );
+
+    Operation Negate(evaluates i: Integer): Integer;
+        requires min_int <= -i <= max_int;
+        ensures Negate = ( -i );
+
+    Operation Difference(evaluates i, j: Integer): Integer;
+        requires min_int <= i - j <= max_int;
+        ensures Difference =  i - j;
+
+    Operation Product(evaluates i, j: Integer): Integer;
+        requires min_int <= i * j <= max_int;
+        ensures Product = ( i * j );
+
+    Operation Power(evaluates i, j: Integer): Integer;
+        requires min_int <= i**j <= max_int;
+        ensures Power = ( i**j );
+
+    Operation Divide(evaluates i, j: Integer; replaces q: Integer);
+	requires if (j <= 0)
+		then ((j*(max_int + 1) < i) and i < (j * (min_int -1)))
+		else true;
+        ensures (|j*q| <= |i|) and (|i + (- j*q)| < |j|);
+
+    Operation Mod(evaluates i, j: Integer): Integer;
+	requires j /= 0;
+	ensures Mod = ( i mod j );
+
+    --Operation Rem(evaluates i, j: Integer): Integer;
+
+    --Operation Quotient(evaluates i, j: Integer): Integer;
+
+    Operation Div(evaluates i, j: Integer): Integer;
+	requires j /= 0;
+	ensures Div = ( i/j );
+
+    Operation Are_Equal(evaluates i, j: Integer): Boolean;
+        ensures Are_Equal = (i = j);
+
+    Operation Are_Not_Equal(evaluates i, j: Integer): Boolean;
+        ensures Are_Not_Equal = (i /= j);
+
+    Operation Replica(restores i: Integer): Integer;
+        ensures Replica = (i);
+
+    Operation Read(replaces i: Integer);
+
+    Operation Write(evaluates i: Integer);
+
+    Operation Write_Line(evaluates i: Integer);
+
+    Operation Max_Int(): Integer;
+        ensures Max_Int = max_int;
+		
+    Operation Min_Int(): Integer;
+        ensures Min_Int = min_int;
+
+    Operation Clear(clears i: Integer);
+
+-- 	Integer generator operations are included in this concept implicitly.
+-- 	The following function assignment statement, for example, 
+--		i := 10;
+-- 	invokes the following operation implicitly:
+--    	Operation Ten( ): Integer;
+--			ensures Ten = 10;
+
+end Integer_Template;

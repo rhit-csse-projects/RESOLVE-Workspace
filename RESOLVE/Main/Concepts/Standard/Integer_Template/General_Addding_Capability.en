@@ -1,0 +1,7 @@
+Enhancement General_Addding_Capability for Integer_Template;
+
+    Operation Add(updates i: Integer; restores j: Integer);
+        requires (min_int <= i + j) and (i + j <= max_int);
+        ensures	i = ( #i + j );
+
+end General_Addding_Capability;

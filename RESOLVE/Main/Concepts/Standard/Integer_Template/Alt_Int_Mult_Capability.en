@@ -1,0 +1,8 @@
+Enhancement Alt_Int_Mult_Capability for Integer_Template;
+	uses Natural_Number_Theory;
+
+	Operation Multiply(alters I, J: Integer; replaces K: Integer);
+		requires (0 <= I) and (min_int <= I * J) and (I * J <= max_int);
+		ensures K = #I * #J;
+
+end Alt_Int_Mult_Capability;

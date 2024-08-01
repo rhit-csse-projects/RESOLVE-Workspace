@@ -1,0 +1,7 @@
+Enhancement Clear_2_Capability for Stack_Template;
+	uses Natural_Number_Theory, String_Theory;
+
+	Operation Clear_2(updates S: Stack);
+		requires |S| = 2;
+		ensures S = Empty_String;
+end Clear_2_Capability;

@@ -1,0 +1,6 @@
+Enhancement Do_Nothing_Capability for Stack_Template;
+	uses Natural_Number_Theory;
+
+	Operation Do_Nothing(restores S: Stack);
+		requires 1 <= |S|;
+end Do_Nothing_Capability;

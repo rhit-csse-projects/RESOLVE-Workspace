@@ -1,0 +1,8 @@
+Enhancement Adding_Capability for Integer_Template;
+	uses Natural_Number_Theory, Integer_Theory;
+
+    Operation Add_to(updates i:Integer; evaluates j:Integer);
+        requires min_int <= i + j and i + j <= max_int and 0 <= j ;
+        ensures	i= #i + #j;
+
+end Adding_Capability;

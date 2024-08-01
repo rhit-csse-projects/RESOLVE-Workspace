@@ -1,0 +1,73 @@
+Facility Activity_301_Reasoning_with_Stack_Objects;
+	uses Integer_Template, Stack_Template;
+	-- an example of a stack user code with with a local operation to flip a stack
+
+	-- this code has several intentional errors
+	-- Understand design-by-contract idea using Stack_Template specification
+
+	-- Note for instructors: Explore alternative specifications, code, and invariants
+
+	Facility Stack_Fac is Stack_Template(Char_Str, 5)
+		realized by Array_Realiz;
+(*
+	Operation Do_Nothing(restores S: Stack);
+	Procedure
+		Var CS: Char_Str;
+
+		Pop(CS, S);
+		Push(CS, S);
+	end Do_Nothing;
+*)
+	-- Note the use of a swap statement at the end of Flip
+	Operation Flip(updates S: Stack);
+		ensures S = Reverse(#S);
+	Procedure
+		Var Next_Entry: Char_Str;
+		Var T: Stack;
+
+		While (1 <= Depth(S))
+			maintaining Reverse(S) o T = Reverse(#S);    
+			decreasing |S|;
+		do
+			Pop(Next_Entry, S);
+			Push(Next_Entry, T);
+		end;
+		S :=: T;
+	end Flip;
+
+	Operation Read_Stack(replaces S: Stack);
+	Procedure
+		Var CS: Char_Str;
+
+		Clear(S);
+		While ( 1 <= Rem_Capacity(S) )
+			changing CS, S;
+			decreasing 5 -|S|;
+		do
+			Read(CS);
+			Push(CS, S);
+		end;
+	end Read_Stack;
+
+	Operation Write_Stack(clears S: Stack);
+	Procedure
+		Var CS: Char_Str;
+
+		While ( 1 <= Depth(S) )
+			changing CS, S;
+			decreasing |S|;
+		do
+			Pop(CS, S);
+			Write_Line(CS);
+		end;
+	end Write_Stack; 
+
+	Operation Main ();
+	Procedure
+		Var S: Stack;
+
+		Read_Stack(S);
+		Flip(S);
+		Write_Stack(S);
+	end Main;
+end Activity_301_Reasoning_with_Stack_Objects;

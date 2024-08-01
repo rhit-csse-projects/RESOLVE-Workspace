@@ -1,0 +1,60 @@
+Facility Activity_104a_Reasoning_about_DBC_and_If_Statements;
+	uses Integer_Template;
+
+	-- Basic
+	-- This activity combines the ideas of design by contract and if statements
+	-- In this actitivity, Main is implemented so that it calls Reorder to determine the maximum and minimum values 
+	-- Activity 1a: To understand Reorder, examine its specification and implementation
+	-- Activity 1b: To understand Main, examine its implementation, pay close attention to the call to Reorder
+
+	-- Guided
+	-- Activity 2: In operation Reorder, eliminate the use of the swap statement and then insert code that uses a 
+	-- 			   temporary variable and assignment statements to correctly swap the values in I and J.
+
+	-- Activity 3a: Uncomment Reorder_2 by deleting the (* and *) that appear before and after the operation. 
+	--				At this time leave Reorder_2's requires clause as a comment.
+	-- Activity 3b: Attempt to verify Reorder_2 by clicking the MP-Prove button.
+	--				After verifying, notice that 2 VCs fail to prove for the line in Reorder_2 that contains the "If"
+	--				These 2 VCs have to do with showing that evaluating I - J does not produce Integer underflow or overflow.
+	-- Activity 3c: Also uncomment the requires clause of Reorder_2 and attempt to verify it
+
+	-- Hard Activity 4+: Rewrite the contract of (ensures clause of) Reorder without using max or min
+
+	Operation Reorder(updates I, J: Integer);
+		ensures I = max(#I, #J) and J = min(#I, #J);
+	Procedure
+		If (I < J) then
+			I :=: J;
+		end;
+	end Reorder;
+
+(*
+	Operation Reorder_2(updates I, J: Integer); 
+	--	requires min_int <= I - J <= max_int;     -- specification: what the implementer of the operation may assume
+		ensures I = max(#I, #J) and J = min(#I, #J);
+	Procedure
+		If (I - J < 0) then
+			I :=: J;
+		end;
+	end Reorder_2;
+*)
+
+	Operation Main();
+	Procedure
+		Var X, Y: Integer;
+		
+		Write_Line("Enter two numbers");
+		Read(X);     
+		Read(Y);
+		
+		Reorder(X, Y);
+		-- If (X < Max_Int()) then
+			-- Reorder_2(X, Y);
+		-- end;
+		
+		Write("Maximum: ");
+		Write_Line(X);
+		Write("Minimum: ");
+		Write_Line(Y);
+	end Main;
+end Activity_104a_Reasoning_about_DBC_and_If_Statements;

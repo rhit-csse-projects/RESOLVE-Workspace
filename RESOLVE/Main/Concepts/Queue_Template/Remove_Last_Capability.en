@@ -1,0 +1,7 @@
+Enhancement Remove_Last_Capability for Queue_Template;
+    uses Natural_Number_Theory;
+    
+    Operation Remove_Last(updates Q: Queue; replaces E: Entry);
+        requires 1 <= |Q|;
+        ensures #Q = Q o <E>;
+end Remove_Last_Capability;

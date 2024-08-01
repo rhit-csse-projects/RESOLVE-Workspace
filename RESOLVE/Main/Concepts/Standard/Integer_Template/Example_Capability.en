@@ -1,0 +1,6 @@
+Enhancement Example_Capability for Integer_Template;
+
+	Operation Example(updates I: Integer);
+		ensures I = #I;
+
+end Example_Capability;

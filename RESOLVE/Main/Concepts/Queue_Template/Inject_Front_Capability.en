@@ -1,0 +1,7 @@
+Enhancement Inject_Front_Capability for Queue_Template;
+    uses Natural_Number_Theory;
+    
+    Operation Inject_at_Front(alters E: Entry; updates Q: Queue);
+        requires 1 + |Q| <= Max_Length;
+        ensures Q = <#E> o #Q;
+end Inject_Front_Capability;

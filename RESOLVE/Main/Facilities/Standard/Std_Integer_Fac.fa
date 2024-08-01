@@ -1,0 +1,2 @@
+Facility Std_Integer_Fac is Integer_Template
+    externally realized by Std_Integer_Realiz;

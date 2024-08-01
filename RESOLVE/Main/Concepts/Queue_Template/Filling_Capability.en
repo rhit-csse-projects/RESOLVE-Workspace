@@ -1,0 +1,5 @@
+Enhancement Filling_Capability for Queue_Template;
+	Operation Fill_Queue(replaces Q: Queue);
+		ensures |Q| = Max_Length;
+		--ensures #input = input o Q;
+end Filling_Capability;

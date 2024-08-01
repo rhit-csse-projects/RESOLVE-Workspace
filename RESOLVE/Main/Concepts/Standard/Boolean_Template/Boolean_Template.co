@@ -1,0 +1,39 @@
+Concept Boolean_Template;
+    uses Boolean_Theory;
+
+    Type Family Boolean is modeled by B;
+        exemplar b;
+        initialization ensures b = true;
+	end;
+
+    Operation True(): Boolean;
+        ensures True = (true);
+
+    Operation False(): Boolean;
+        ensures False = (false);
+
+    Operation And(evaluates b1, b2: Boolean): Boolean;
+        ensures And = (b1 and b2);
+
+    Operation Or(evaluates b1, b2: Boolean): Boolean;
+        ensures Or = (b1 or b2);
+
+    Operation Not(evaluates b: Boolean): Boolean;
+        ensures Not = (not(b));
+
+    Operation Are_Equal(evaluates b1, b2: Boolean): Boolean;
+        ensures Are_Equal = (b1 = b2);
+
+    Operation Are_Not_Equal(evaluates b1, b2: Boolean): Boolean;
+        ensures Are_Not_Equal = (b1 /= b2);
+
+    Operation Replica(restores b: Boolean): Boolean;
+        ensures Replica = (b);
+
+    Operation Read(replaces b: Boolean);
+
+    Operation Write(evaluates b: Boolean);
+
+    Operation Write_Line(evaluates b: Boolean);
+	
+end Boolean_Template;

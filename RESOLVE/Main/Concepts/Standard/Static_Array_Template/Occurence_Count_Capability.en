@@ -1,0 +1,8 @@
+Enhancement Occurence_Count_Capability for Static_Array_Template;
+	uses Integer_Template, Integer_Domain_Function_Theory;
+-- name Hit_Count      
+    Operation Occ_Count(restores A: Static_Array; restores key: Entry): Integer;
+    	requires Upper_Bound + (-Lower_Bound) + 1 <= max_int;
+    	ensures Occ_Count = Occ_Ct_In_Range(A,key,Lower_Bound,Upper_Bound);
+    	 
+end Occurence_Count_Capability;

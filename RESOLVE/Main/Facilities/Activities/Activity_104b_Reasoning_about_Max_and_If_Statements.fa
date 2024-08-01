@@ -1,0 +1,36 @@
+Facility Activity_104b_Reasoning_about_Max_and_If_Statements; -- 104b needs edits
+	uses Integer_Template;
+
+	-- Reasoning about if statements needs reasoning about the correctness of all possible paths
+	-- Activities: Understand, reason, and inquire
+
+	Operation Max(restores I: Integer; restores J: Integer) : Integer;
+		ensures Max = max(I, J);
+	Procedure
+		If (I >= J) then
+			Max := I;   -- return value of the function is the name of the function itself
+		else
+			Max := J;
+		end;
+	end Max;
+
+(*
+	-- The operation below is intentionally buggy; fix it
+	Operation Mad_Max(restores I: Integer; restores J: Integer) : Integer;
+		ensures (Mad_Max >= I) and (Mad_Max >= J) and (Mad_Max = I or Mad_Max = J);
+	Procedure
+		Mad_Max := I + J;
+		
+		If (I > J) then
+			Mad_Max := Mad_Max - J;
+		end;
+		If (J > I) then
+			Mad_Max := Mad_Max - I;
+		end;
+	end Mad_Max;
+
+	Operation Main();
+	Procedure
+	end Main;
+*)
+end Activity_104b_Reasoning_about_Max_and_If_Statements;

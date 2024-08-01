@@ -1,0 +1,2 @@
+Facility Std_Boolean_Fac is Boolean_Template
+	externally realized by Std_Boolean_Realiz;

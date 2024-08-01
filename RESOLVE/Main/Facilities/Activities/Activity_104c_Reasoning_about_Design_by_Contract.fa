@@ -1,0 +1,66 @@
+Facility Activity_104c_Reasoning_about_Design_by_Contract;
+	uses Integer_Template;
+(*
+	-- This is a short intro to design by contract (specification)
+    
+	-- Basics
+	-- Activity 1a: Understand each specification given
+	-- Activity 1b: Click on MP-Prove to reason about this code
+        
+	-- Guided:
+
+	-- Activity 2a: Remove the requires clause of Do_Nothing_1 and attempt to prove; explain
+	-- Activity 2b: Reinsert the removed requires clause; Remove an assignment statement in Do_Nothing_1 and attempt to prove; explain
+	-- Activity 2c: Fix up Do_Nothing_1 back to what it was
+
+	-- Activity 3a: Uncomment call to Do_Nothing in Main and attempt to prove
+	-- Activity 3a: Uncomment call to Do_Nothing_1 in Main and attempt to prove; explain
+	-- Activity 3c: Uncomment call the if statement in Main and attempt to prove; explain
+
+	-- Activity 4a: Change only the code for Do_Nothing_2 so it verifies
+	-- Activity 4b: Uncomment call to Do_Nothing_2 in Main and attempt to prove; explain
+
+	-- Inquiry
+	-- Activity 5+: Compare various specifications of Do_Nothing; 
+	--              Understand design-by-contract responsibilities of implementers of operations and callers
+*)
+
+	Operation Do_Nothing_0 (updates I: Integer);   -- specification: the parameter is modified purposefully as stated in the ensures clause
+		ensures I = #I;                         -- specification: what the code for this operation should do
+	Procedure                                   -- from here is code
+	end Do_Nothing_0;
+
+	Operation Do_Nothing (restores I: Integer);  -- desirable specification: parameter mode is shorthand for saying ensures I = #I
+	Procedure                                   -- from here is code
+	end Do_Nothing;
+
+	Operation Do_Nothing_1 (restores I: Integer);    -- specification:
+		requires I < max_int;                       -- specification: what the implementer of the operation may assume 
+	Procedure                                       -- from here is code
+		I := I + 1;
+		I := I - 1;
+	end Do_Nothing_1;
+
+(*
+	-- this will not verify; change the code so it verifies!
+	Operation Do_Nothing_2(restores I: Integer);    -- specification:
+	Procedure                                       -- from here is code
+		I := I + 1;
+		I := I - 1;
+	end Do_Nothing_2;
+*)
+
+	Operation Main();
+	Procedure
+		Var X, Y: Integer;
+		Read(X);
+		-- Do_Nothing_0(X);
+		-- Do_Nothing(X);
+		-- If (X < Max_Int()) then
+		--    Do_Nothing_1(X);
+		-- end;
+		-- Do_Nothing_2(X);
+		Write_Line(X);
+	end Main; 
+
+end Activity_104c_Reasoning_about_Design_by_Contract;

@@ -1,0 +1,7 @@
+Enhancement Int_Do_Nothing_Capability for Integer_Template;
+	uses Natural_Number_Theory;
+
+	Operation Do_Nothing(restores I: Integer);
+		requires (I + 1 <= max_int);
+
+end Int_Do_Nothing_Capability;

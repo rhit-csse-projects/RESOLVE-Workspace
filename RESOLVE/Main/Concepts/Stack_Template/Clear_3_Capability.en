@@ -1,0 +1,6 @@
+Enhancement Clear_3_Capability for Stack_Template;
+	uses Natural_Number_Theory;
+
+	Operation Clear_3(clears S: Stack);
+		requires (|S| = 3);
+end Clear_3_Capability;

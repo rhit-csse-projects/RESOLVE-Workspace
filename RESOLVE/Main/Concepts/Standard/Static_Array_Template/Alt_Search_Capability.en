@@ -1,0 +1,6 @@
+Enhancement Alt_Search_Capability for Static_Array_Template;
+
+    Operation binarySearch(restores key: Entry; restores A: Static_Array; replaces result: Integer);
+      ensures true;
+end Alt_Search_Capability;
+

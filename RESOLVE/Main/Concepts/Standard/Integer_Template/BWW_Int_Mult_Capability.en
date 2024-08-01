@@ -1,0 +1,8 @@
+Enhancement BWW_Int_Mult_Capability for Integer_Template;
+	uses Natural_Number_Theory;
+
+	Operation Multiply(clears i: Integer; updates j: Integer);
+		requires (i >= 0) and (min_int <= i * j) and (i * j <= max_int);
+		ensures j = #i * #j;
+
+end BWW_Int_Mult_Capability;

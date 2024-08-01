@@ -1,0 +1,64 @@
+Concept Location_Linking_Template_1(type Info);
+	uses Integer_Theory;
+	(* Note: Under Construction! *)
+
+	Definition Void: Z;
+	Var Content: Z -> Info;
+	Var Ref: Z -> Z;
+
+	--Facility_Initialization ensures for all L: Z, Info.Is_Initial(Content(L)) and Ref(L) = Void;
+
+	Type Family Position is modeled by Z;
+		exemplar P;
+		initialization ensures P = Void;
+	end;
+
+	Operation Take_New_Location(updates P: Position);
+		ensures P /= Void;
+
+	Operation Relocate_to(preserves Q: Position; updates P: Position);
+		ensures (P = Q);
+
+	Operation Are_Colocated(preserves P: Position; preserves Q: Position): Boolean;
+		ensures Are_Colocated = (P = Q);
+
+	Operation Follow_Link(updates P: Position);
+		requires P /= Void;
+		ensures P = Ref(#P);
+
+	Operation Relocate_To_Target(preserves Q: Position; updates P: Position);
+		requires Q /= Void;
+		ensures P = Ref(Q);
+		
+	Operation Redirect_Link(preserves P: Position; updates Q: Position);
+		updates Ref;
+		requires P /= Void;
+		ensures Ref = lambda (L:Z).(
+				{{#Q if L = P; 
+				  #Ref(L) otherwise;}}) and
+				Q = #Ref(P);
+
+	Operation Redirect_and_Update(preserves P: Position; 
+			updates Q: Position);
+		updates Ref;
+		requires P /= Void;
+		ensures Ref = 
+			lambda (L:Z).(
+				{{#Ref(#Q) if L = P;
+				  #Ref(L) otherwise;}}) and
+			Q = #Ref(P);
+
+	Operation Is_At_Void(preserves P: Position): Boolean;
+		ensures Is_At_Void = (P = Void);
+
+	Operation Reset_To_Void(clears P: Position);
+
+	Operation Swap_Info(preserves P: Position; updates I: Info);
+		updates Content;
+		requires P /= Void;
+		ensures I = #Content(P) 
+			and Content = lambda (L:Z).(
+				{{#I if L = P;
+				  #Content(L) otherwise;}});
+
+end Location_Linking_Template_1;

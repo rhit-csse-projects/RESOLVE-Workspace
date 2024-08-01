@@ -1,0 +1,4 @@
+Enhancement Writing_Capability for Queue_Template;
+	Operation Write_Queue(restores Q: Queue);
+		--ensures output = #output o Q;
+end Writing_Capability;

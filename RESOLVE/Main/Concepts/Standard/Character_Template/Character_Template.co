@@ -1,0 +1,52 @@
+Concept Character_Template;
+    uses Natural_Number_Theory, Std_Boolean_Fac, Std_Integer_Fac;
+
+    Definition Last_Char_Num: N;
+
+    Constraint 1 <= Last_Char_Num;
+
+    Type Family Character is modeled by N;
+        exemplar c;
+		constraints c <= Last_Char_Num;
+		initialization 
+			ensures c = 0;
+	end;
+
+    Operation Char_to_Int(evaluates c: Character): Integer;
+        ensures Char_to_Int = ( c );
+
+    Operation Are_Equal(evaluates c1, c2: Character): Boolean;
+        ensures Are_Equal = ( c1 = c2 );
+
+    Operation Are_Not_Equal(evaluates c1, c2: Character): Boolean;
+        ensures Are_Not_Equal = ( c1 /= c2 );
+
+    Operation Less_Or_Equal(evaluates c1, c2: Character): Boolean;
+        ensures Less_Or_Equal = ( c1 <= c2 );
+
+    Operation Less(evaluates c1, c2: Character): Boolean;
+        ensures Less = ( 1 + c1 <= c2 );
+
+    Operation Greater_Or_Equal(evaluates c1, c2: Character): Boolean;
+        ensures Greater_Or_Equal = ( c2 <= c1 );
+
+    Operation Greater(evaluates c1, c2: Character): Boolean;
+        ensures Greater = ( 1 + c2 <= c1 );
+
+    Operation Replica(restores c: Character): Character;
+        ensures Replica = ( c );
+
+    Operation Read(replaces c: Character);
+
+    Operation Write(evaluates c: Character);
+
+    Operation Write_Line(evaluates c: Character);
+
+-- 	Character generator operations are included in this concept implicitly.
+-- 	The following function assignment statement, for example, 
+--		c := ' '; 
+-- 	invokes the following operation implicitly:
+--    	Operation Blank_Space( ): Character;
+--			ensures Blank_Space = 32;
+
+end Character_Template;

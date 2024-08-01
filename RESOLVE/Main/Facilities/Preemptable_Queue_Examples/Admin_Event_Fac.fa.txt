@@ -1,0 +1,63 @@
+Facility Admin_Event_Fac;
+    -- Group member names
+    uses Integer_Template, Queue_Template;
+    requires 5 <= max_int;
+
+    -- a Record is like a structure; you can use := to assign to its fields.
+    Type Event_Info = Record
+            Id: Integer;        -- event ID
+            Kind: Char_Str;     -- concert, game, etc.
+            Parking: Boolean;   -- true if Parking is available
+        end;
+    end;
+
+    --The next two operations need to be passed as parameters to enhancement realizations
+    -- Write procedures for the next two local operations
+
+    Operation Copy_EI (replaces EI1: Event_Info; restores EI2: Event_Info);
+        ensures EI1 = EI2;
+    Procedure
+    end Copy_EI;
+
+    Operation Write_EI (restores EI: Event_Info);
+        -- ensures Std_Output = #Std_Output o Output_for(EI);
+    Procedure
+    end Write_EI;
+
+    -- Declare a facility EQF of preemptable queue of Event_Info enhanced by Copying and Writing capabilities
+    -- You should switch the realizations for the concept and enhancements and check it works for any combination
+     Facility EQF is Preemptable_Queue_Template(Event_Info, 5)
+            realized by Skeleton_Realiz;
+
+    -- The following local mathematical definitions are used in subsequent specifications
+    Definition Has_Parking(Q: (Str((B * Z) * Str(N)))): B;
+  --      = (For all EI: Event_Info, if Is_Substring(<EI>, Q) then EI.Parking;
+
+    Definition Has_No_Parking(Q: (Str((B * Z) * Str(N)))): B;
+  --      = (For all EI: Event_Info, if Is_Substring(<EI>, Q) then not EI.Parking;
+
+    Definition Kind_Occurs_Ct(kind: Str(N), Q: (Str((B * Z) * Str(N)))): N;
+  --      = Occurs_Ct(Kind_of(EI), Kind_Str_of(Q));
+
+    -- Write procedures for the following operations; annotate loops with suitable assertions
+    Operation Split_Events (clears Source: EQF.P_Queue; replaces PQ, NPQ: EQF.P_Queue);
+        ensures Is_Permutation(#Source, PQ o NPQ) and Has_Parking(PQ) and Has_No_Parking(NPQ);
+    Procedure
+    end Split_Events;
+
+    Operation Count_Occurrences (restores Kind: Char_Str; restores Source: EQF.P_Queue; replaces Count: Integer);
+        ensures Count = Kind_Occurs_Ct(Kind, Source);
+    Procedure
+    end Count_Occurrences;
+
+    Operation Fill_EI_Queue(replaces Q: EQF.P_Queue);
+    --    ensures #Std_Input = Input_for(Q) o Std_Input;
+    Procedure
+    end Fill_EI_Queue;
+
+    Operation Main();
+    (* Use above operations and enhancement operations and produce readable outputs *)
+    Procedure
+    end Main;
+
+end Admin_Event_Fac;

@@ -1,0 +1,13 @@
+Concept Seq_Output_Template;
+
+	Type Family Seq_Output is modeled by B;
+		exemplar f;
+	end;
+	
+	Operation Open_Write_File(evaluates f: Char_Str): Seq_Output;
+
+	Operation Write_To_File(evaluates pw: Seq_Output;updates s: Char_Str);
+
+	Operation Close_Write_File(evaluates pw: Seq_Output);
+
+end Seq_Output_Template;

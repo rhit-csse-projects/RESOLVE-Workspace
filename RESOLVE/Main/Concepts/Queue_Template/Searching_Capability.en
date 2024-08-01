@@ -1,0 +1,4 @@
+Enhancement Searching_Capability for Queue_Template;
+	Operation Is_Present(restores E: Entry; restores Q: Queue): Boolean;
+		ensures Is_Present = Is_Substring(<E>, Q);
+end Searching_Capability;

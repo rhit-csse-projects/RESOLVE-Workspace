@@ -1,0 +1,3 @@
+Enhancement Writing_Capability for Stack_Template;
+	Operation Write(clears S: Stack);
+end Writing_Capability;

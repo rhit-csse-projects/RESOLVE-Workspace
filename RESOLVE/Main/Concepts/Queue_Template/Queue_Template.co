@@ -1,0 +1,32 @@
+Concept Queue_Template(type Entry; evaluates Max_Length: Integer);
+	uses Natural_Number_Theory, String_Theory, Integer_Ext_Theory;
+	requires 1 <= Max_Length;
+ 
+	Type Family Queue is modeled by Str(Entry);
+		exemplar Q;
+		constraint |Q| <= Max_Length;
+		initialization ensures Q = Empty_String;
+	end;
+ 
+	Operation Enqueue(alters E: Entry; updates Q: Queue);
+		requires 1 + |Q| <= Max_Length;
+		ensures Q = #Q o <#E>;
+ 
+	Operation Dequeue(replaces R: Entry; updates Q: Queue);
+		requires 1 <= |Q|;
+		ensures #Q = <R> o Q;
+
+	Operation Swap_First_Entry(updates E: Entry; updates Q: Queue);
+		requires 1 <= |Q|;
+		ensures E = DeString(Prt_Btwn(0, 1, #Q)) and 
+				Q = <#E> o Prt_Btwn(1, |#Q|, #Q);
+
+	Operation Length(restores Q: Queue): Integer;
+		ensures Length = (|Q|);
+ 
+	Operation Rem_Capacity(restores Q: Queue): Integer;
+		ensures Rem_Capacity = (Max_Length - |Q|);
+ 
+	Operation Clear(clears Q: Queue);
+ 
+end Queue_Template;

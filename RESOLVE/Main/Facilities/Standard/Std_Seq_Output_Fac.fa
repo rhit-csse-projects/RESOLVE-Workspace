@@ -1,0 +1,2 @@
+Facility Std_Seq_Output_Fac is Seq_Output_Template
+    externally realized by Std_Seq_Output_Realiz;

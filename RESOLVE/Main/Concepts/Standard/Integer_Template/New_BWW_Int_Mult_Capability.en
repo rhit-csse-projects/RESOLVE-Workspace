@@ -1,0 +1,7 @@
+Enhancement New_BWW_Int_Mult_Capability for Integer_Template;
+
+	Operation Multiply(updates i: Integer; restores j: Integer);
+		requires (min_int <= i * j) and (i * j <= max_int);
+		ensures i = #i * j;
+
+end New_BWW_Int_Mult_Capability;
