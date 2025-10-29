@@ -1,6 +1,6 @@
 Realization Recursive_Add_to_Realiz for Adding_Capability of Integer_Template;
 
-	Recursive Procedure Add_to(updates i:Integer; evaluates j:Integer);
+	Recursive Procedure Add_to(updates i:Integer; alters j:Integer);
 		decreasing j;
 
 		If ( 1 <= j) then

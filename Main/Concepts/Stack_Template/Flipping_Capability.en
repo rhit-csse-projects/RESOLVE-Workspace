@@ -1,0 +1,5 @@
+Enhancement Flipping_Capability for Stack_Template;
+	Operation Flip(updates S: Stack);
+		ensures S = Reverse(#S);
+end Flipping_Capability;
+
