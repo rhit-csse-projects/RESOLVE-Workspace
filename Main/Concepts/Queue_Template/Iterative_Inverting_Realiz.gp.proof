@@ -1,0 +1,1964 @@
+Proofs for Iterative_Inverting_Realiz.rb generated Mon Oct 20 18:37:57 EDT 2025
+
+================================= Summary =================================
+
+[Prover Settings]
+    Prover: General Purpose Prover
+    Timeout: 5000 ms
+    Number of Tries Before Halting: -1
+
+[VC Results]
+    VC 0_1     .........     proved in 4 ms.
+    VC 1_1     .........     not proved in 0 ms.
+    VC 1_2     .........     not proved in 1 ms.
+    VC 1_3     .........     not proved in 1 ms.
+    VC 1_4     .........     not proved in 1 ms.
+    VC 1_5     .........     not proved in 1 ms.
+    VC 2_1     .........     not proved in 0 ms.
+    VC 2_2     .........     not proved in 1 ms.
+    VC 2_3     .........     proved in 1 ms.
+    VC 2_4     .........     not proved in 1 ms.
+    VC 2_5     .........     not proved in 2 ms.
+    VC 2_6     .........     not proved in 2 ms.
+    VC 3_1     .........     not proved in 0 ms.
+    VC 3_2     .........     not proved in 1 ms.
+    VC 3_3     .........     not proved in 1 ms.
+    VC 3_4     .........     not proved in 1 ms.
+    VC 3_5     .........     not proved in 1 ms.
+    VC 4_1     .........     not proved in 0 ms.
+    VC 4_2     .........     not proved in 0 ms.
+    VC 4_3     .........     not proved in 1 ms.
+
+[Aggregate Results]
+    Total number of proved VCs: 2
+    Total number of unproved and skipped VCs: 18
+    Total elapsed time in generating proofs: 121 ms
+
+========================= Proof Generation Details  =========================
+
+    Enhancement Realization Name:   Iterative_Inverting_Realiz
+    Enhancement Name:               Inverting_Capability
+    Concept Name:                   Queue_Template
+
+=============================================================================
+
+=================================== 0_1 ===================================
+
+VC 0_1:
+Requires Clause for Stack_Template in Facility Instantiation Rule at Iterative_Inverting_Realiz.rb(3:16)
+
+Goal:
+(1 <= Max_Length)
+
+Given(s):
+1. (1 <= Max_Length)
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    Max_Length -> 4
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=2||prevClusterArg=0||ccNumber=0||clusterNumber=2||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=2||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=1||indexToArgumentList=3||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=2||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=0||dominantCClass=3|
+
+_____________________
+
+=================================== 1_1 ===================================
+
+VC 1_1:
+Base Case of the Invariant of While Statement at Iterative_Inverting_Realiz.rb(11:15)
+
+Goal:
+((Reverse(Q) o Empty_String) = Reverse(Q))
+
+Given(s):
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q -> 3
+    Reverse -> 4
+    Empty_String -> 5
+    o -> 6
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=5||prevClusterArg=0||ccNumber=0||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=1||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=5||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=3||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=4||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=4||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=6||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=3||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=2|
+    |treeNodeLabel=5||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=2||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=0||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=1||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=6|
+
+_____________________
+
+=================================== 1_2 ===================================
+
+VC 1_2:
+Requires Clause for Dequeue at Iterative_Inverting_Realiz.rb(14:3)
+
+Goal:
+(1 <= |Q''''|)
+
+Given(s):
+1. (1 <= |Q''''|)
+2. ((Reverse(Q'''') o S'''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    Q'''' -> 4
+    |_| -> 5
+    Reverse -> 6
+    S'''' -> 7
+    o -> 8
+    Q -> 9
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=7||prevClusterArg=0||ccNumber=0||clusterNumber=9||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=3||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=9||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=6||clusterNumber=11||nexIndexWithSameCCInSameLevel=5||alternativeArg=4|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=2||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=3|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=8||indexToArgumentList=6||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=7|
+    |treeNodeLabel=6||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=8||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=11||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=6||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=5|
+    |treeNodeLabel=7||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=10||standTag=10||nextCCStand=8||nextVrtyStand=0||prvVrtyStand=6|
+    |treeNodeLabel=1||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=4|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=0||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=10||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=1||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=11||classTag=11||lastArgStringPosition=0||dominantCClass=11|
+
+_____________________
+
+=================================== 1_3 ===================================
+
+VC 1_3:
+Requires Clause for Push at Iterative_Inverting_Realiz.rb(15:3)
+
+Goal:
+((1 + |S''''|) <= Max_Length)
+
+Given(s):
+1. (1 <= |Q''''|)
+2. ((Reverse(Q'''') o S'''') = Reverse(Q))
+3. (1 <= Max_Length)
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    Q'''' -> 4
+    |_| -> 5
+    Reverse -> 6
+    S'''' -> 7
+    o -> 8
+    Q -> 9
+    Max_Length -> 10
+    + -> 11
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=10||prevClusterArg=0||ccNumber=0||clusterNumber=11||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=3||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=9||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=9|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=4|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=7||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=11||prevClusterArg=1||ccNumber=14||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=0||prevClusterArg=10||ccNumber=11||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=2||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=3|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=8||indexToArgumentList=6||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=7|
+    |treeNodeLabel=6||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=1||indexToArgumentList=8||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=9||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=4||indexToCongruenceClass=14||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=13||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=12||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=6||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=5|
+    |treeNodeLabel=7||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=10||standTag=10||nextCCStand=8||nextVrtyStand=0||prvVrtyStand=6|
+    |treeNodeLabel=10||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=4|
+    |treeNodeLabel=5||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=3|
+    |treeNodeLabel=11||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=12|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=0||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=10||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=1||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=0||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=1||dominantCClass=14|
+    |firstStand=15||classTag=15||lastArgStringPosition=0||dominantCClass=15|
+
+_____________________
+
+=================================== 1_4 ===================================
+
+VC 1_4:
+Inductive Case of Invariant of While Statement at Iterative_Inverting_Realiz.rb(11:15)
+
+Goal:
+((Reverse(Q''') o (<Next_Entry'''''> o S'''')) = Reverse(Q))
+
+Given(s):
+1. (Q'''' = (<Next_Entry'''''> o Q'''))
+2. (1 <= |Q''''|)
+3. ((Reverse(Q'''') o S'''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q'''' -> 3
+    Next_Entry''''' -> 4
+    <_> -> 5
+    Q''' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    Reverse -> 10
+    S'''' -> 11
+    Q -> 12
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=15||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=0||ccNumber=0||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=12||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=1||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=7||prevClusterArg=0||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=10||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=6|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=12||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=13||clusterNumber=14||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=4||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=11||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=4|
+    |nextClusterArg=14||prevClusterArg=0||ccNumber=15||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=10|
+    |nextClusterArg=0||prevClusterArg=13||ccNumber=16||clusterNumber=17||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=16||prevClusterArg=0||ccNumber=17||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=13|
+    |nextClusterArg=0||prevClusterArg=15||ccNumber=18||clusterNumber=19||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=9||indexToArgumentList=5||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=6|
+    |treeNodeLabel=10||indexToArgumentList=5||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=7||indexToArgumentList=9||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=11|
+    |treeNodeLabel=10||indexToArgumentList=10||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=12||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=14||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=10||indexToCongruenceClass=18||nextStandCluster=0||previousStandCluster=0||dominantCluster=18||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=16||indexToCongruenceClass=19||nextStandCluster=0||previousStandCluster=0||dominantCluster=19||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=12||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=14||prvVrtyStand=9|
+    |treeNodeLabel=11||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=12||standTag=12||nextCCStand=14||nextVrtyStand=16||prvVrtyStand=5|
+    |treeNodeLabel=12||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=10|
+    |treeNodeLabel=10||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=18||prvVrtyStand=14|
+    |treeNodeLabel=7||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=17||prvVrtyStand=12|
+    |treeNodeLabel=7||firstStandCluster=17||standTag=17||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=16|
+    |treeNodeLabel=10||firstStandCluster=18||standTag=18||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=15|
+    |treeNodeLabel=2||firstStandCluster=19||standTag=19||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=1|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=1||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=15||classTag=15||lastArgStringPosition=1||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=2||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=1||dominantCClass=17|
+    |firstStand=18||classTag=18||lastArgStringPosition=2||dominantCClass=18|
+    |firstStand=19||classTag=19||lastArgStringPosition=0||dominantCClass=19|
+
+_____________________
+
+=================================== 1_5 ===================================
+
+VC 1_5:
+Termination of While Statement at Iterative_Inverting_Realiz.rb(12:3)
+
+Goal:
+((1 + |Q'''|) <= |Q''''|)
+
+Given(s):
+1. (Q'''' = (<Next_Entry'''''> o Q'''))
+2. (1 <= |Q''''|)
+3. ((Reverse(Q'''') o S'''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q'''' -> 3
+    Next_Entry''''' -> 4
+    <_> -> 5
+    Q''' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    Reverse -> 10
+    S'''' -> 11
+    Q -> 12
+    + -> 13
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=13||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=0||ccNumber=0||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=1||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=12||prevClusterArg=0||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=10||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=6|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=13||clusterNumber=14||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=4||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=15||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=14||prevClusterArg=0||ccNumber=16||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=10|
+    |nextClusterArg=0||prevClusterArg=13||ccNumber=7||clusterNumber=17||nexIndexWithSameCCInSameLevel=7||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=9||indexToArgumentList=5||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=6|
+    |treeNodeLabel=10||indexToArgumentList=5||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=7||indexToArgumentList=9||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=11|
+    |treeNodeLabel=10||indexToArgumentList=10||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=13||indexToArgumentList=12||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=14||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=12||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=17||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=14||prvVrtyStand=9|
+    |treeNodeLabel=11||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=12||standTag=12||nextCCStand=14||nextVrtyStand=0||prvVrtyStand=5|
+    |treeNodeLabel=12||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=10|
+    |treeNodeLabel=9||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=7|
+    |treeNodeLabel=13||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=17||standTag=17||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=8|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=1|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=1||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=15||classTag=15||lastArgStringPosition=1||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=1||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=0||dominantCClass=17|
+
+_____________________
+
+=================================== 2_1 ===================================
+
+VC 2_1:
+Base Case of the Invariant of While Statement at Iterative_Inverting_Realiz.rb(11:15)
+
+Goal:
+((Reverse(Q) o Empty_String) = Reverse(Q))
+
+Given(s):
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q -> 3
+    Reverse -> 4
+    Empty_String -> 5
+    o -> 6
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=5||prevClusterArg=0||ccNumber=0||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=1||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=5||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=3||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=4||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=4||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=6||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=3||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=2|
+    |treeNodeLabel=5||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=2||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=0||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=1||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=6|
+
+_____________________
+
+=================================== 2_2 ===================================
+
+VC 2_2:
+Base Case of the Invariant of While Statement [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(19:15)
+
+Goal:
+((Q''' o S''') = Reverse(Q)) or 
+(1 <= |Q'''|)
+
+Given(s):
+1. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q''' -> 3
+    Reverse -> 4
+    S''' -> 5
+    o -> 6
+    Q -> 7
+    1 -> 8
+    |_| -> 9
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=0||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=1||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=6||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=2||ccNumber=4||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=8||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=7||ccNumber=5||clusterNumber=9||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=10||prevClusterArg=1||ccNumber=10||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=0||prevClusterArg=9||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=4||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=4||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=4||indexToArgumentList=5||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=6||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=8||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=6|
+    |treeNodeLabel=9||indexToArgumentList=2||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=10||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=3||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=7||prvVrtyStand=2|
+    |treeNodeLabel=5||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=8||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=7||standTag=7||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=3|
+    |treeNodeLabel=6||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=5|
+    |treeNodeLabel=2||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=0||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=7||classTag=5||lastArgStringPosition=2||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=8||classTag=8||lastArgStringPosition=1||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+
+_____________________
+
+=================================== 2_3 ===================================
+
+VC 2_3:
+Requires Clause for Pop [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(22:3)
+
+Goal:
+(1 <= |S''|) or 
+(1 <= |Q'''|)
+
+Given(s):
+1. (1 <= |S''|)
+2. ((Q'' o S'') = Reverse(Q))
+3. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    S'' -> 4
+    |_| -> 5
+    Q'' -> 6
+    o -> 7
+    Q -> 8
+    Reverse -> 9
+    Q''' -> 10
+    S''' -> 11
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=0||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=3||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=5||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=2||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=7||clusterNumber=9||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=10||clusterNumber=11||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=10||prevClusterArg=1||ccNumber=11||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=9||ccNumber=12||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=6||indexToCongruenceClass=6||nextStandCluster=13||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=7|
+    |treeNodeLabel=9||indexToArgumentList=7||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=8|
+    |treeNodeLabel=9||indexToArgumentList=8||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=10|
+    |treeNodeLabel=7||indexToArgumentList=10||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=6||dominantCluster=13||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=6||standTag=6||nextCCStand=9||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=9||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=11||prvVrtyStand=8|
+    |treeNodeLabel=10||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=9|
+    |treeNodeLabel=11||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=6|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=2||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=0||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=1||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=1||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=6|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=1||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=2||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=0||dominantCClass=6|
+
+_____________________
+
+=================================== 2_4 ===================================
+
+VC 2_4:
+Requires Clause for Enqueue [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(23:3)
+
+Goal:
+((1 + |Q''|) <= Max_Length) or 
+(1 <= |Q'''|)
+
+Given(s):
+1. (1 <= |S''|)
+2. ((Q'' o S'') = Reverse(Q))
+3. ((Reverse(Q''') o S''') = Reverse(Q))
+4. (1 <= Max_Length)
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    S'' -> 4
+    |_| -> 5
+    Q'' -> 6
+    o -> 7
+    Q -> 8
+    Reverse -> 9
+    Q''' -> 10
+    S''' -> 11
+    Max_Length -> 12
+    + -> 13
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=12||prevClusterArg=0||ccNumber=0||clusterNumber=14||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=11||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=3||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=5||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=2||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=7||clusterNumber=9||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=10||clusterNumber=11||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=10||prevClusterArg=1||ccNumber=11||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=9||ccNumber=12||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=14||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=4|
+    |nextClusterArg=13||prevClusterArg=1||ccNumber=17||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=9|
+    |nextClusterArg=0||prevClusterArg=12||ccNumber=14||clusterNumber=18||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=6||indexToCongruenceClass=6||nextStandCluster=13||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=7|
+    |treeNodeLabel=9||indexToArgumentList=7||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=8|
+    |treeNodeLabel=9||indexToArgumentList=8||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=10|
+    |treeNodeLabel=7||indexToArgumentList=10||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=6||dominantCluster=13||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=14||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=12|
+    |treeNodeLabel=1||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=5||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=0|
+    |treeNodeLabel=13||indexToArgumentList=4||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=13||indexToCongruenceClass=18||nextStandCluster=0||previousStandCluster=0||dominantCluster=18||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=8||indexToCongruenceClass=19||nextStandCluster=0||previousStandCluster=0||dominantCluster=19||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=20||nextStandCluster=0||previousStandCluster=0||dominantCluster=20||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=16||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=6||standTag=6||nextCCStand=9||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=9||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=11||prvVrtyStand=8|
+    |treeNodeLabel=10||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=9|
+    |treeNodeLabel=11||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=6|
+    |treeNodeLabel=12||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=18||prvVrtyStand=4|
+    |treeNodeLabel=5||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=19||prvVrtyStand=3|
+    |treeNodeLabel=13||firstStandCluster=17||standTag=17||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=18||standTag=18||nextCCStand=0||nextVrtyStand=20||prvVrtyStand=15|
+    |treeNodeLabel=5||firstStandCluster=19||standTag=19||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=16|
+    |treeNodeLabel=1||firstStandCluster=20||standTag=20||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=18|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=2||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=0||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=1||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=1||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=6|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=1||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=2||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=0||dominantCClass=6|
+    |firstStand=14||classTag=14||lastArgStringPosition=2||dominantCClass=14|
+    |firstStand=15||classTag=15||lastArgStringPosition=0||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=0||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=1||dominantCClass=17|
+    |firstStand=18||classTag=18||lastArgStringPosition=0||dominantCClass=18|
+    |firstStand=19||classTag=19||lastArgStringPosition=0||dominantCClass=19|
+    |firstStand=20||classTag=20||lastArgStringPosition=0||dominantCClass=20|
+
+_____________________
+
+=================================== 2_5 ===================================
+
+VC 2_5:
+Inductive Case of Invariant of While Statement [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(19:15)
+
+Goal:
+(((Q'' o <Next_Entry''>) o S') = Reverse(Q)) or 
+(1 <= |Q'''|)
+
+Given(s):
+1. (S'' = (<Next_Entry''> o S'))
+2. (1 <= |S''|)
+3. ((Q'' o S'') = Reverse(Q))
+4. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S'' -> 3
+    Next_Entry'' -> 4
+    <_> -> 5
+    S' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    Q'' -> 10
+    Q -> 11
+    Reverse -> 12
+    Q''' -> 13
+    S''' -> 14
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=17||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=0||ccNumber=0||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=1||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=19||prevClusterArg=0||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=14||prevClusterArg=0||ccNumber=9||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=6|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=1||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=11||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=14||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=10|
+    |nextClusterArg=13||prevClusterArg=0||ccNumber=15||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+    |nextClusterArg=0||prevClusterArg=12||ccNumber=16||clusterNumber=17||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=3||clusterNumber=19||nexIndexWithSameCCInSameLevel=3||alternativeArg=9|
+    |nextClusterArg=16||prevClusterArg=0||ccNumber=19||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=12|
+    |nextClusterArg=0||prevClusterArg=15||ccNumber=4||clusterNumber=20||nexIndexWithSameCCInSameLevel=4||alternativeArg=0|
+    |nextClusterArg=18||prevClusterArg=0||ccNumber=20||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=15|
+    |nextClusterArg=0||prevClusterArg=17||ccNumber=21||clusterNumber=22||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=23||clusterNumber=24||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=9||indexToArgumentList=5||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=6|
+    |treeNodeLabel=7||indexToArgumentList=9||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=11|
+    |treeNodeLabel=12||indexToArgumentList=10||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=0|
+    |treeNodeLabel=13||indexToArgumentList=1||indexToCongruenceClass=14||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=12|
+    |treeNodeLabel=12||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=14||indexToArgumentList=1||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=14|
+    |treeNodeLabel=7||indexToArgumentList=13||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=10||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=18||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=14||indexToCongruenceClass=19||nextStandCluster=0||previousStandCluster=0||dominantCluster=19||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=16||indexToCongruenceClass=20||nextStandCluster=0||previousStandCluster=0||dominantCluster=20||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=10||indexToCongruenceClass=21||nextStandCluster=0||previousStandCluster=0||dominantCluster=21||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=18||indexToCongruenceClass=22||nextStandCluster=0||previousStandCluster=0||dominantCluster=22||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=11||indexToCongruenceClass=23||nextStandCluster=0||previousStandCluster=0||dominantCluster=23||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=19||indexToCongruenceClass=24||nextStandCluster=0||previousStandCluster=0||dominantCluster=24||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=23||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=24||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=10||standTag=10||nextCCStand=13||nextVrtyStand=17||prvVrtyStand=5|
+    |treeNodeLabel=11||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=12||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=13||prvVrtyStand=0|
+    |treeNodeLabel=12||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=12|
+    |treeNodeLabel=13||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=12||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=18||prvVrtyStand=13|
+    |treeNodeLabel=14||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=17||standTag=17||nextCCStand=18||nextVrtyStand=19||prvVrtyStand=10|
+    |treeNodeLabel=12||firstStandCluster=18||standTag=18||nextCCStand=0||nextVrtyStand=21||prvVrtyStand=15|
+    |treeNodeLabel=7||firstStandCluster=19||standTag=19||nextCCStand=0||nextVrtyStand=20||prvVrtyStand=17|
+    |treeNodeLabel=7||firstStandCluster=20||standTag=20||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=19|
+    |treeNodeLabel=12||firstStandCluster=21||standTag=21||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=18|
+    |treeNodeLabel=2||firstStandCluster=22||standTag=22||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=23||standTag=23||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=7|
+    |treeNodeLabel=1||firstStandCluster=24||standTag=24||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=8|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=2||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=1|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=1||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=1||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=0||dominantCClass=10|
+    |firstStand=14||classTag=14||lastArgStringPosition=1||dominantCClass=14|
+    |firstStand=15||classTag=15||lastArgStringPosition=1||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=2||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=0||dominantCClass=17|
+    |firstStand=18||classTag=18||lastArgStringPosition=0||dominantCClass=17|
+    |firstStand=19||classTag=19||lastArgStringPosition=1||dominantCClass=19|
+    |firstStand=20||classTag=20||lastArgStringPosition=1||dominantCClass=20|
+    |firstStand=21||classTag=21||lastArgStringPosition=2||dominantCClass=21|
+    |firstStand=22||classTag=22||lastArgStringPosition=0||dominantCClass=22|
+    |firstStand=23||classTag=23||lastArgStringPosition=1||dominantCClass=23|
+    |firstStand=24||classTag=24||lastArgStringPosition=0||dominantCClass=24|
+
+_____________________
+
+=================================== 2_6 ===================================
+
+VC 2_6:
+Termination of While Statement [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(20:3)
+
+Goal:
+((1 + |S'|) <= |S''|) or 
+(1 <= |Q'''|)
+
+Given(s):
+1. (S'' = (<Next_Entry''> o S'))
+2. (1 <= |S''|)
+3. ((Q'' o S'') = Reverse(Q))
+4. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S'' -> 3
+    Next_Entry'' -> 4
+    <_> -> 5
+    S' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    Q'' -> 10
+    Q -> 11
+    Reverse -> 12
+    Q''' -> 13
+    S''' -> 14
+    + -> 15
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=16||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=0||ccNumber=0||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=1||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=15||prevClusterArg=0||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=14|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=9||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=18|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=1||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=11||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=14||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=10|
+    |nextClusterArg=13||prevClusterArg=0||ccNumber=15||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+    |nextClusterArg=0||prevClusterArg=12||ccNumber=16||clusterNumber=17||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=4||clusterNumber=19||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=19||clusterNumber=20||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=17||prevClusterArg=0||ccNumber=20||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=12|
+    |nextClusterArg=0||prevClusterArg=16||ccNumber=7||clusterNumber=21||nexIndexWithSameCCInSameLevel=7||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=22||clusterNumber=23||nexIndexWithSameCCInSameLevel=0||alternativeArg=15|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=9||indexToArgumentList=5||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=6|
+    |treeNodeLabel=7||indexToArgumentList=9||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=11|
+    |treeNodeLabel=12||indexToArgumentList=10||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=0|
+    |treeNodeLabel=13||indexToArgumentList=1||indexToCongruenceClass=14||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=12|
+    |treeNodeLabel=12||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=14||indexToArgumentList=1||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=14|
+    |treeNodeLabel=7||indexToArgumentList=13||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=10||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=18||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=14||indexToCongruenceClass=19||nextStandCluster=0||previousStandCluster=0||dominantCluster=19||nextWithSameArg=0|
+    |treeNodeLabel=15||indexToArgumentList=15||indexToCongruenceClass=20||nextStandCluster=0||previousStandCluster=0||dominantCluster=20||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=17||indexToCongruenceClass=21||nextStandCluster=0||previousStandCluster=0||dominantCluster=21||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=11||indexToCongruenceClass=22||nextStandCluster=0||previousStandCluster=0||dominantCluster=22||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=18||indexToCongruenceClass=23||nextStandCluster=0||previousStandCluster=0||dominantCluster=23||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=19||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=21||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=10||standTag=10||nextCCStand=13||nextVrtyStand=17||prvVrtyStand=5|
+    |treeNodeLabel=11||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=12||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=13||prvVrtyStand=0|
+    |treeNodeLabel=12||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=12|
+    |treeNodeLabel=13||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=12||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=18||prvVrtyStand=13|
+    |treeNodeLabel=14||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=17||standTag=17||nextCCStand=18||nextVrtyStand=0||prvVrtyStand=10|
+    |treeNodeLabel=12||firstStandCluster=18||standTag=18||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=15|
+    |treeNodeLabel=9||firstStandCluster=19||standTag=19||nextCCStand=0||nextVrtyStand=22||prvVrtyStand=7|
+    |treeNodeLabel=15||firstStandCluster=20||standTag=20||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=21||standTag=21||nextCCStand=0||nextVrtyStand=23||prvVrtyStand=8|
+    |treeNodeLabel=9||firstStandCluster=22||standTag=22||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=19|
+    |treeNodeLabel=1||firstStandCluster=23||standTag=23||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=21|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=2||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=1|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=1||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=1||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=0||dominantCClass=10|
+    |firstStand=14||classTag=14||lastArgStringPosition=1||dominantCClass=14|
+    |firstStand=15||classTag=15||lastArgStringPosition=1||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=2||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=0||dominantCClass=17|
+    |firstStand=18||classTag=18||lastArgStringPosition=0||dominantCClass=17|
+    |firstStand=19||classTag=19||lastArgStringPosition=1||dominantCClass=19|
+    |firstStand=20||classTag=20||lastArgStringPosition=1||dominantCClass=20|
+    |firstStand=21||classTag=21||lastArgStringPosition=0||dominantCClass=21|
+    |firstStand=22||classTag=22||lastArgStringPosition=1||dominantCClass=22|
+    |firstStand=23||classTag=23||lastArgStringPosition=0||dominantCClass=23|
+
+_____________________
+
+=================================== 3_1 ===================================
+
+VC 3_1:
+Base Case of the Invariant of While Statement at Iterative_Inverting_Realiz.rb(11:15)
+
+Goal:
+((Reverse(Q) o Empty_String) = Reverse(Q))
+
+Given(s):
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q -> 3
+    Reverse -> 4
+    Empty_String -> 5
+    o -> 6
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=5||prevClusterArg=0||ccNumber=0||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=1||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=5||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=3||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=4||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=4||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=6||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=3||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=2|
+    |treeNodeLabel=5||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=2||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=0||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=1||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=6|
+
+_____________________
+
+=================================== 3_2 ===================================
+
+VC 3_2:
+Requires Clause for Dequeue at Iterative_Inverting_Realiz.rb(14:3)
+
+Goal:
+(1 <= |Q'''|)
+
+Given(s):
+1. (1 <= |Q'''|)
+2. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    Q''' -> 4
+    |_| -> 5
+    Reverse -> 6
+    S''' -> 7
+    o -> 8
+    Q -> 9
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=7||prevClusterArg=0||ccNumber=0||clusterNumber=9||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=3||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=9||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=6||clusterNumber=11||nexIndexWithSameCCInSameLevel=5||alternativeArg=4|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=2||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=3|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=8||indexToArgumentList=6||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=7|
+    |treeNodeLabel=6||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=8||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=11||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=6||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=5|
+    |treeNodeLabel=7||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=10||standTag=10||nextCCStand=8||nextVrtyStand=0||prvVrtyStand=6|
+    |treeNodeLabel=1||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=4|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=0||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=10||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=1||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=11||classTag=11||lastArgStringPosition=0||dominantCClass=11|
+
+_____________________
+
+=================================== 3_3 ===================================
+
+VC 3_3:
+Requires Clause for Push at Iterative_Inverting_Realiz.rb(15:3)
+
+Goal:
+((1 + |S'''|) <= Max_Length)
+
+Given(s):
+1. (1 <= |Q'''|)
+2. ((Reverse(Q''') o S''') = Reverse(Q))
+3. (1 <= Max_Length)
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    Q''' -> 4
+    |_| -> 5
+    Reverse -> 6
+    S''' -> 7
+    o -> 8
+    Q -> 9
+    Max_Length -> 10
+    + -> 11
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=10||prevClusterArg=0||ccNumber=0||clusterNumber=11||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=3||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=9||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=9|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=4|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=7||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=11||prevClusterArg=1||ccNumber=14||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=0||prevClusterArg=10||ccNumber=11||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=4||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=2||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=3|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=8||indexToArgumentList=6||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=7|
+    |treeNodeLabel=6||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=1||indexToArgumentList=8||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=9||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=4||indexToCongruenceClass=14||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=13||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=12||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=6||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=5|
+    |treeNodeLabel=7||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=10||standTag=10||nextCCStand=8||nextVrtyStand=0||prvVrtyStand=6|
+    |treeNodeLabel=10||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=4|
+    |treeNodeLabel=5||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=3|
+    |treeNodeLabel=11||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=12|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=0||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=10||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=1||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=0||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=1||dominantCClass=14|
+    |firstStand=15||classTag=15||lastArgStringPosition=0||dominantCClass=15|
+
+_____________________
+
+=================================== 3_4 ===================================
+
+VC 3_4:
+Inductive Case of Invariant of While Statement at Iterative_Inverting_Realiz.rb(11:15)
+
+Goal:
+((Reverse(Q'') o (<Next_Entry'''> o S''')) = Reverse(Q))
+
+Given(s):
+1. (Q''' = (<Next_Entry'''> o Q''))
+2. (1 <= |Q'''|)
+3. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q''' -> 3
+    Next_Entry''' -> 4
+    <_> -> 5
+    Q'' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    Reverse -> 10
+    S''' -> 11
+    Q -> 12
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=15||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=0||ccNumber=0||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=12||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=1||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=7||prevClusterArg=0||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=10||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=6|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=12||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=13||clusterNumber=14||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=4||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=11||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=4|
+    |nextClusterArg=14||prevClusterArg=0||ccNumber=15||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=10|
+    |nextClusterArg=0||prevClusterArg=13||ccNumber=16||clusterNumber=17||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=16||prevClusterArg=0||ccNumber=17||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=13|
+    |nextClusterArg=0||prevClusterArg=15||ccNumber=18||clusterNumber=19||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=9||indexToArgumentList=5||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=6|
+    |treeNodeLabel=10||indexToArgumentList=5||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=7||indexToArgumentList=9||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=11|
+    |treeNodeLabel=10||indexToArgumentList=10||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=12||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=14||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=10||indexToCongruenceClass=18||nextStandCluster=0||previousStandCluster=0||dominantCluster=18||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=16||indexToCongruenceClass=19||nextStandCluster=0||previousStandCluster=0||dominantCluster=19||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=12||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=14||prvVrtyStand=9|
+    |treeNodeLabel=11||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=12||standTag=12||nextCCStand=14||nextVrtyStand=16||prvVrtyStand=5|
+    |treeNodeLabel=12||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=10|
+    |treeNodeLabel=10||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=18||prvVrtyStand=14|
+    |treeNodeLabel=7||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=17||prvVrtyStand=12|
+    |treeNodeLabel=7||firstStandCluster=17||standTag=17||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=16|
+    |treeNodeLabel=10||firstStandCluster=18||standTag=18||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=15|
+    |treeNodeLabel=2||firstStandCluster=19||standTag=19||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=1|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=1||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=15||classTag=15||lastArgStringPosition=1||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=2||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=1||dominantCClass=17|
+    |firstStand=18||classTag=18||lastArgStringPosition=2||dominantCClass=18|
+    |firstStand=19||classTag=19||lastArgStringPosition=0||dominantCClass=19|
+
+_____________________
+
+=================================== 3_5 ===================================
+
+VC 3_5:
+Termination of While Statement at Iterative_Inverting_Realiz.rb(12:3)
+
+Goal:
+((1 + |Q''|) <= |Q'''|)
+
+Given(s):
+1. (Q''' = (<Next_Entry'''> o Q''))
+2. (1 <= |Q'''|)
+3. ((Reverse(Q''') o S''') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q''' -> 3
+    Next_Entry''' -> 4
+    <_> -> 5
+    Q'' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    Reverse -> 10
+    S''' -> 11
+    Q -> 12
+    + -> 13
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=13||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=3||prevClusterArg=0||ccNumber=0||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=1||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=12||prevClusterArg=0||ccNumber=6||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=10||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=6|
+    |nextClusterArg=0||prevClusterArg=8||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=13||clusterNumber=14||nexIndexWithSameCCInSameLevel=0||alternativeArg=8|
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=4||clusterNumber=15||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=15||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=14||prevClusterArg=0||ccNumber=16||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=10|
+    |nextClusterArg=0||prevClusterArg=13||ccNumber=7||clusterNumber=17||nexIndexWithSameCCInSameLevel=7||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=9||indexToArgumentList=5||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=7||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=6|
+    |treeNodeLabel=10||indexToArgumentList=5||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=1||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=9|
+    |treeNodeLabel=7||indexToArgumentList=9||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+    |treeNodeLabel=12||indexToArgumentList=1||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=11|
+    |treeNodeLabel=10||indexToArgumentList=10||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=11||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=13||indexToArgumentList=12||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=14||indexToCongruenceClass=17||nextStandCluster=0||previousStandCluster=0||dominantCluster=17||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=12||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=17||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=10||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=14||prvVrtyStand=9|
+    |treeNodeLabel=11||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=12||standTag=12||nextCCStand=14||nextVrtyStand=0||prvVrtyStand=5|
+    |treeNodeLabel=12||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=10|
+    |treeNodeLabel=9||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=7|
+    |treeNodeLabel=13||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=17||standTag=17||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=8|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=1||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=1|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=2||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=0||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=1||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=0||dominantCClass=12|
+    |firstStand=15||classTag=15||lastArgStringPosition=1||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=1||dominantCClass=16|
+    |firstStand=17||classTag=17||lastArgStringPosition=0||dominantCClass=17|
+
+_____________________
+
+=================================== 4_1 ===================================
+
+VC 4_1:
+Base Case of the Invariant of While Statement at Iterative_Inverting_Realiz.rb(11:15)
+
+Goal:
+((Reverse(Q) o Empty_String) = Reverse(Q))
+
+Given(s):
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q -> 3
+    Reverse -> 4
+    Empty_String -> 5
+    o -> 6
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=5||prevClusterArg=0||ccNumber=0||clusterNumber=4||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=1||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=5||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=5||ccNumber=3||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=4||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=4||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=6||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=3||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=2|
+    |treeNodeLabel=5||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=2||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=0||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=2||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=1||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=6|
+
+_____________________
+
+=================================== 4_2 ===================================
+
+VC 4_2:
+Base Case of the Invariant of While Statement [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(19:15)
+
+Goal:
+((Q'' o S'') = Reverse(Q)) or 
+(1 <= |Q''|)
+
+Given(s):
+1. ((Reverse(Q'') o S'') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q'' -> 3
+    Reverse -> 4
+    S'' -> 5
+    o -> 6
+    Q -> 7
+    1 -> 8
+    |_| -> 9
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=9||prevClusterArg=0||ccNumber=0||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=6||prevClusterArg=1||ccNumber=1||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=4||prevClusterArg=1||ccNumber=3||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=0||prevClusterArg=3||ccNumber=4||clusterNumber=5||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=6||clusterNumber=7||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=2||ccNumber=4||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=8||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=7||ccNumber=5||clusterNumber=9||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=10||prevClusterArg=1||ccNumber=10||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=7|
+    |nextClusterArg=0||prevClusterArg=9||ccNumber=11||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=4||indexToArgumentList=2||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=5||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=6||indexToArgumentList=4||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=0|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=6||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=4|
+    |treeNodeLabel=4||indexToArgumentList=5||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=6||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=8||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=10||nextStandCluster=0||previousStandCluster=0||dominantCluster=10||nextWithSameArg=6|
+    |treeNodeLabel=9||indexToArgumentList=2||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=10||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=3||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=3||standTag=3||nextCCStand=0||nextVrtyStand=7||prvVrtyStand=2|
+    |treeNodeLabel=5||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=8||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=7||standTag=7||nextCCStand=5||nextVrtyStand=0||prvVrtyStand=3|
+    |treeNodeLabel=6||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=5|
+    |treeNodeLabel=2||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=8||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=9||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=0||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=2||dominantCClass=4|
+    |firstStand=7||classTag=5||lastArgStringPosition=2||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=1||dominantCClass=6|
+    |firstStand=7||classTag=7||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=8||classTag=8||lastArgStringPosition=1||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=0||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=1||dominantCClass=10|
+    |firstStand=11||classTag=11||lastArgStringPosition=2||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=0||dominantCClass=12|
+
+_____________________
+
+=================================== 4_3 ===================================
+
+VC 4_3:
+Ensures Clause of Invert [After Logical Reduction(s)] at Iterative_Inverting_Realiz.rb(6:11)
+
+Goal:
+(Q' = Reverse(Q)) or 
+(1 <= |S'|) or 
+(1 <= |Q''|)
+
+Given(s):
+1. ((Q' o S') = Reverse(Q))
+2. ((Reverse(Q'') o S'') = Reverse(Q))
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    Q' -> 3
+    S' -> 4
+    o -> 5
+    Q -> 6
+    Reverse -> 7
+    Q'' -> 8
+    S'' -> 9
+    1 -> 10
+    |_| -> 11
+
+_____________________
+
+[Cluster Argument Array]:
+    |nextClusterArg=0||prevClusterArg=0||ccNumber=0||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=10||prevClusterArg=0||ccNumber=0||clusterNumber=12||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=8||prevClusterArg=1||ccNumber=1||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=2||ccNumber=2||clusterNumber=3||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=4||clusterNumber=6||nexIndexWithSameCCInSameLevel=0||alternativeArg=9|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=7||clusterNumber=8||nexIndexWithSameCCInSameLevel=0||alternativeArg=4|
+    |nextClusterArg=7||prevClusterArg=1||ccNumber=8||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=5|
+    |nextClusterArg=0||prevClusterArg=6||ccNumber=9||clusterNumber=10||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=2||ccNumber=3||clusterNumber=11||nexIndexWithSameCCInSameLevel=0||alternativeArg=3|
+    |nextClusterArg=0||prevClusterArg=1||ccNumber=2||clusterNumber=13||nexIndexWithSameCCInSameLevel=0||alternativeArg=2|
+    |nextClusterArg=12||prevClusterArg=1||ccNumber=12||clusterNumber=0||nexIndexWithSameCCInSameLevel=0||alternativeArg=6|
+    |nextClusterArg=0||prevClusterArg=10||ccNumber=13||clusterNumber=14||nexIndexWithSameCCInSameLevel=0||alternativeArg=0|
+    |nextClusterArg=0||prevClusterArg=10||ccNumber=15||clusterNumber=16||nexIndexWithSameCCInSameLevel=0||alternativeArg=11|
+
+[Cluster Array]:
+    |treeNodeLabel=0||indexToArgumentList=0||indexToCongruenceClass=0||nextStandCluster=0||previousStandCluster=0||dominantCluster=0||nextWithSameArg=0|
+    |treeNodeLabel=3||indexToArgumentList=1||indexToCongruenceClass=1||nextStandCluster=0||previousStandCluster=0||dominantCluster=1||nextWithSameArg=0|
+    |treeNodeLabel=4||indexToArgumentList=1||indexToCongruenceClass=2||nextStandCluster=0||previousStandCluster=0||dominantCluster=2||nextWithSameArg=1|
+    |treeNodeLabel=5||indexToArgumentList=3||indexToCongruenceClass=3||nextStandCluster=10||previousStandCluster=0||dominantCluster=3||nextWithSameArg=0|
+    |treeNodeLabel=6||indexToArgumentList=1||indexToCongruenceClass=4||nextStandCluster=0||previousStandCluster=0||dominantCluster=4||nextWithSameArg=2|
+    |treeNodeLabel=7||indexToArgumentList=1||indexToCongruenceClass=5||nextStandCluster=0||previousStandCluster=0||dominantCluster=5||nextWithSameArg=4|
+    |treeNodeLabel=7||indexToArgumentList=4||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=0||dominantCluster=6||nextWithSameArg=0|
+    |treeNodeLabel=8||indexToArgumentList=1||indexToCongruenceClass=7||nextStandCluster=0||previousStandCluster=0||dominantCluster=7||nextWithSameArg=5|
+    |treeNodeLabel=7||indexToArgumentList=5||indexToCongruenceClass=8||nextStandCluster=0||previousStandCluster=0||dominantCluster=8||nextWithSameArg=0|
+    |treeNodeLabel=9||indexToArgumentList=1||indexToCongruenceClass=9||nextStandCluster=0||previousStandCluster=0||dominantCluster=9||nextWithSameArg=7|
+    |treeNodeLabel=5||indexToArgumentList=7||indexToCongruenceClass=3||nextStandCluster=0||previousStandCluster=3||dominantCluster=10||nextWithSameArg=0|
+    |treeNodeLabel=2||indexToArgumentList=8||indexToCongruenceClass=11||nextStandCluster=0||previousStandCluster=0||dominantCluster=11||nextWithSameArg=0|
+    |treeNodeLabel=10||indexToArgumentList=1||indexToCongruenceClass=12||nextStandCluster=0||previousStandCluster=0||dominantCluster=12||nextWithSameArg=9|
+    |treeNodeLabel=11||indexToArgumentList=9||indexToCongruenceClass=13||nextStandCluster=0||previousStandCluster=0||dominantCluster=13||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=11||indexToCongruenceClass=14||nextStandCluster=0||previousStandCluster=0||dominantCluster=14||nextWithSameArg=0|
+    |treeNodeLabel=11||indexToArgumentList=5||indexToCongruenceClass=15||nextStandCluster=0||previousStandCluster=0||dominantCluster=15||nextWithSameArg=0|
+    |treeNodeLabel=1||indexToArgumentList=12||indexToCongruenceClass=16||nextStandCluster=0||previousStandCluster=0||dominantCluster=16||nextWithSameArg=0|
+
+[Plantation Array]:
+    |treeNodeLabel=0||firstStandCluster=0||standTag=0||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=3||firstStandCluster=1||standTag=1||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=4||firstStandCluster=2||standTag=2||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=3||standTag=3||nextCCStand=6||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=6||firstStandCluster=4||standTag=4||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=5||standTag=5||nextCCStand=0||nextVrtyStand=6||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=6||standTag=6||nextCCStand=0||nextVrtyStand=8||prvVrtyStand=5|
+    |treeNodeLabel=8||firstStandCluster=7||standTag=7||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=7||firstStandCluster=8||standTag=8||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=6|
+    |treeNodeLabel=9||firstStandCluster=9||standTag=9||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=5||firstStandCluster=10||standTag=10||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=3|
+    |treeNodeLabel=2||firstStandCluster=11||standTag=11||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=10||firstStandCluster=12||standTag=12||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=0|
+    |treeNodeLabel=11||firstStandCluster=13||standTag=13||nextCCStand=0||nextVrtyStand=15||prvVrtyStand=0|
+    |treeNodeLabel=1||firstStandCluster=14||standTag=14||nextCCStand=0||nextVrtyStand=16||prvVrtyStand=0|
+    |treeNodeLabel=11||firstStandCluster=15||standTag=15||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=13|
+    |treeNodeLabel=1||firstStandCluster=16||standTag=16||nextCCStand=0||nextVrtyStand=0||prvVrtyStand=14|
+
+[Class Array]:
+    |firstStand=0||classTag=0||lastArgStringPosition=0||dominantCClass=0|
+    |firstStand=1||classTag=1||lastArgStringPosition=1||dominantCClass=1|
+    |firstStand=2||classTag=2||lastArgStringPosition=2||dominantCClass=2|
+    |firstStand=3||classTag=3||lastArgStringPosition=1||dominantCClass=3|
+    |firstStand=4||classTag=4||lastArgStringPosition=1||dominantCClass=4|
+    |firstStand=5||classTag=5||lastArgStringPosition=0||dominantCClass=5|
+    |firstStand=6||classTag=6||lastArgStringPosition=0||dominantCClass=3|
+    |firstStand=7||classTag=7||lastArgStringPosition=1||dominantCClass=7|
+    |firstStand=8||classTag=8||lastArgStringPosition=1||dominantCClass=8|
+    |firstStand=9||classTag=9||lastArgStringPosition=2||dominantCClass=9|
+    |firstStand=10||classTag=10||lastArgStringPosition=0||dominantCClass=3|
+    |firstStand=11||classTag=11||lastArgStringPosition=0||dominantCClass=11|
+    |firstStand=12||classTag=12||lastArgStringPosition=1||dominantCClass=12|
+    |firstStand=13||classTag=13||lastArgStringPosition=2||dominantCClass=13|
+    |firstStand=14||classTag=14||lastArgStringPosition=0||dominantCClass=14|
+    |firstStand=15||classTag=15||lastArgStringPosition=2||dominantCClass=15|
+    |firstStand=16||classTag=16||lastArgStringPosition=0||dominantCClass=16|
+
+_____________________
+
