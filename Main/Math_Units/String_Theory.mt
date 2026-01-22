@@ -87,7 +87,7 @@ Precis String_Theory;
 
 	Corollary Concatenation_3: -- Is_Right_Cancellative(o)
 		For all S,T,U:SStr,
-			((S o U) = (T o U)) = (S = T); -- check with file
+			((S o U) = (T o U)) implies (S = T); -- check with file
 			
 
 (* Inductive Definition |(alpha:SStr)|:N is
@@ -196,7 +196,7 @@ Precis String_Theory;
 
 	Corollary Reverse_6: -- Is_Left_Cancellative( o )
 		For all S,T,U:SStr,
-			((U o S) = (U o T)) = (S = T);
+			((U o S) = (U o T)) implies (S = T);
 
 (*	Corollary Reverse_7:
 		For all alpha,beta,gamma,delta:SStr,
