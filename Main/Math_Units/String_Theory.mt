@@ -102,11 +102,13 @@ Precis String_Theory;
 	Corollary Str_Length_1_a:
 		For all alpha:SStr,
 			(|alpha| = 0) = (alpha = Empty_String);
-			 
+
+(*
+	2-12-26			 
 	Corollary Str_Length_1b:
 		For all alpha:SStr,
 			not(alpha = Empty_String) = (1 <= |alpha|);
-
+*)
 	Corollary Str_Length_2: 
 		For all alpha,beta:SStr,
 			|alpha o beta| = |alpha| + |beta|;
@@ -146,7 +148,8 @@ Precis String_Theory;
 		For all T : Cls,
 		For all e : T,
 			<e> : Str(T);
-				
+
+(*	2-12-26			
 	Corollary Singleton_Str_1:
 		For all p:Prime_Str,
 			not(p = Empty_String);
@@ -154,6 +157,13 @@ Precis String_Theory;
 	Corollary Singleton_Str_2:
 		For all p:Prime_Str,
 			|p| = 1;
+*)
+
+--	2-12-26
+	Corollary Singleton_Str_2a:
+		For all x:Entity,
+			|<x>| = 1;
+
 			
 	Corollary Singleton_Str_3a: -- Is_Bijective(op<>); Changed from Is_Injective
 		For all x,y:Entity,
@@ -174,9 +184,16 @@ Precis String_Theory;
 	Theorem Reverse_Expanded_Definition_i:
 		Reverse(Empty_String) = Empty_String;
 
+(*	2-12-26
 	Corollary Reverse_1:
 		For all p:Prime_Str,
 			Reverse(p) = p;
+*)
+
+--	2-12-26
+	Corollary Reverse_1a:
+		For all x:Entity,
+			Reverse(<x>) = <x>;
 
 	Corollary Reverse_2:
 		For all alpha,beta:SStr,
@@ -341,11 +358,12 @@ Precis String_Theory;
 		For all alpha:SStr,
 		For all n:Z,
 			1 <= n + 1 <= |alpha| implies <DeString(Prt_Btwn(n, n + 1, alpha))> = Prt_Btwn(n,n+1,alpha);
-			
+
+(*	2-12-26			
 	Corollary DeString_2_no_addition_no_Length:
 		For all alpha:SStr,
 			not(alpha = Empty_String) implies <DeString(Prt_Btwn(0, 1, alpha))> = Prt_Btwn(0,1,alpha);
-			
+*)			
 			
 	Definition Is_Substring(a:SStr,b:SStr):B;
 	
@@ -366,7 +384,8 @@ Precis String_Theory;
 	Corollary Is_Substring_3_transitive:
 		For all a,b,c:SStr,
 			Is_Substring(a,b) and Is_Substring(b,c) implies Is_Substring(a,c);
-	
+
+(*	2-12-26
 	-- Will be able to state these as: (not(Is_Substring(a,c)) implies Is_Substring(a, b o c) = Is_Substring(a, b);
 	Corollary Is_Substring_3_transitive_contrapositive_a:
 		For all a,b,c:SStr,
@@ -377,6 +396,7 @@ Precis String_Theory;
 		For all a,b,c:SStr,
 		For all p:B,
 			(not(Is_Substring(a,c)) and Is_Substring(a, c o b) = p ) implies p = Is_Substring(a, b);	
+*)
 				
 	Corollary Is_Substring_3_antisymmetric:
 		For all a,b:SStr,
@@ -396,10 +416,18 @@ Precis String_Theory;
 			Is_Substring(Prt_Btwn(m,n,a),a);
 			
 	-- These are specialized versions for Prime_Str
-	
+
+(*	2-12-26
 	Corollary Is_Substring_Primes_1:
 		For all p,s:Prime_Str,		
 			(p = s) = Is_Substring(p,s);
+*)
+
+--	2-12-26
+	Corollary Is_Substring_Primes_1a:
+		For all x, y: Entity,		
+			(<x> = <y>) = Is_Substring(<x>, <y>);
+
 						
 	Corollary Not_Eq_Str_Length:
 		For all S,T:SStr,
