@@ -163,11 +163,11 @@ Corollary LTE_1a: -- Is_Transitive(op<=);
     	
 Corollary LTE_2: -- Is_Antisymmetric(<=)
     For all m,n:Z,
-    	(m <= n and n <= m) = (m = n);
+    	(m <= n and n <= m) implies (m = n);
 
 Corollary LTE_3: -- Is_Total(<=)
     For all m,n:Z,
-    	m <= n or n <= m;
+    	m <= n implies n <= m;
 
 Corollary LTE_3a: --Is_Reflexive(<=) -- implied by Is_Total
     For all n:Z,

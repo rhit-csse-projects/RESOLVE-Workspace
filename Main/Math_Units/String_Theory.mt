@@ -89,47 +89,58 @@ Precis String_Theory;
 		For all S,T,U:SStr,
 			((S o U) = (T o U)) implies (S = T); -- check with file
 			
+	Corollary Concatenation_4: -- Is_Left_Cancellative( o )
+		For all S,T,U:SStr,
+			((U o S) = (U o T)) implies (S = T);
 
 (* Inductive Definition |(alpha:SStr)|:N is
 		(i) |Empty_String| = 0;
 		(ii) |ext(alpha,x)| = suc(|alpha|); *)
 
-	Definition |(alpha:SStr)|:N; 
+	Definition |(alpha:SStr)|:N;
 
 	Theorem Str_Length_Expanded_Def_i:
 		|Empty_String| = 0;
 
 	Corollary Str_Length_1_a:
 		For all alpha:SStr,
-			(|alpha| = 0) = (alpha = Empty_String);
+			(|alpha| = 0) implies (alpha = Empty_String);
+
+	Corollary Str_Length_2_a:
+		For all alpha:SStr,
+			(|alpha| <= 0) implies (alpha = Empty_String);
+
+	Corollary Str_Length_3_a:
+		For all alpha:SStr,
+			(|alpha| <= 0) implies (|alpha| = 0);
 
 (*
-	2-12-26			 
+	2-12-26
 	Corollary Str_Length_1b:
 		For all alpha:SStr,
 			not(alpha = Empty_String) = (1 <= |alpha|);
 *)
-	Corollary Str_Length_2: 
+	Corollary Str_Length_2:
 		For all alpha,beta:SStr,
 			|alpha o beta| = |alpha| + |beta|;
-			
+(*
 	Corollary Str_Length2_without_Length_Op:
 		For all alpha,beta,gamma:SStr,
 			alpha o beta = gamma implies |gamma| = |alpha o beta|;
-	
+
 	Corollary Str_Length_Lt:
 		For all alpha,beta,gamma:SStr,
 			|alpha o beta| = |gamma| and 1 <= |beta| implies 1 + |alpha| <= |gamma|;
-	
-	Corollary Str_Length_2_1: 
+
+	Corollary Str_Length_2_1:
 		For all alpha,beta,gamma:SStr,
 			|alpha o beta| = |gamma| implies |alpha| = |gamma| + (- |beta|);
-		
+*)
 	Corollary Str_Length_3_1:
 		For all alpha,beta,gamma,delta:SStr,
 			((alpha o beta) = (gamma o delta) and |beta| = |delta|)
 				implies (beta = delta and alpha = gamma);
-	
+
 	Corollary Str_Length_3_2:
 		For all alpha,beta,gamma,delta:SStr,
 			((alpha o beta) = (gamma o delta) and |alpha| = |gamma|)
@@ -143,13 +154,13 @@ Precis String_Theory;
 	Type Theorem Prime_Str_is_SSTR:
 		For all p : Prime_Str,
 			p : SStr;
-	
+
 	Type Theorem Stringleton_Preserves_Generic_Type:
 		For all T : Cls,
 		For all e : T,
 			<e> : Str(T);
 
-(*	2-12-26			
+(*	2-12-26
 	Corollary Singleton_Str_1:
 		For all p:Prime_Str,
 			not(p = Empty_String);
@@ -164,10 +175,10 @@ Precis String_Theory;
 		For all x:Entity,
 			|<x>| = 1;
 
-			
+
 	Corollary Singleton_Str_3a: -- Is_Bijective(op<>); Changed from Is_Injective
 		For all x,y:Entity,
-			(<x> = <y>) = (x = y);
+			(<x> = <y>) implies (x = y);
 
 (*	Corollary Singleton_Str 4:
 		Is_Proper_Class(SStr); *)
@@ -202,7 +213,7 @@ Precis String_Theory;
 	Corollary Reverse_3:
 		For all alpha:SStr,
 			Reverse(Reverse(alpha)) = alpha;
-
+(*
 	Corollary Reverse_4: -- Is_Bijective(Reverse);
 		For all alpha,beta:SStr,
 			(Reverse(alpha) = Reverse(beta)) = (alpha = beta);
@@ -210,10 +221,8 @@ Precis String_Theory;
 	Corollary Reverse_5:
 		For all alpha,beta:SStr,
 			Reverse(alpha) = beta implies Reverse(beta) = alpha;
+*)
 
-	Corollary Reverse_6: -- Is_Left_Cancellative( o )
-		For all S,T,U:SStr,
-			((U o S) = (U o T)) implies (S = T);
 
 (*	Corollary Reverse_7:
 		For all alpha,beta,gamma,delta:SStr,
@@ -234,7 +243,7 @@ Precis String_Theory;
 	Theorem Prt_Btwn_Expanded_Def_i:
 		For all m,n:Z,
 			Prt_Btwn(m,n,Empty_String) = Empty_String;
-			
+
 	Corollary Prt_Btwn_1:
 		For all alpha, beta:SStr,
 		For all n:Z,
@@ -259,7 +268,7 @@ Precis String_Theory;
 		For all alpha:SStr,
 		For all m,n:Z,
 			|Prt_Btwn(m,n,alpha)| = max( min(n,|alpha|) + -( max(m,0))  ,0);
-			
+
 	Corollary Prt_Btwn_6a:
 		For all alpha:SStr,
 		For all i,m,n:N,
@@ -269,12 +278,12 @@ Precis String_Theory;
 		For all alpha:SStr,
 		For all i,m,n:N,
 			(|Prt_Btwn(m,n,alpha)| = i and m <= n <= |alpha|) implies i <= n;
-			
+
 	Corollary Prt_Btwn_6c: -- 6a without negatives
 		For all alpha:SStr,
 		For all i,m,n:N,
 			(m + |Prt_Btwn(m,n,alpha)| = i and m <= n <= |alpha|) implies i = n;
-		
+
 	Corollary Prt_Btwn_7:
 		For all alpha:SStr,
 		For all m,n:Z,
@@ -329,13 +338,13 @@ Precis String_Theory;
 		For all alpha:SStr,
 		For all m,n,p,q:Z,
 			Prt_Btwn(m,n,Prt_Btwn(p,q,alpha)) = Prt_Btwn(m + p, min(n + p, q), alpha);
-			
+
 
 	Corollary Prt_Btwn_12_b:
 		For all alpha:SStr,
 		For all n:Z,
 			Reverse(Prt_Btwn(n,n+1,alpha)) = Prt_Btwn(n,n+1,alpha);
-			
+
 	--Determines if for every pairing of elements from s and t, the given predicate
 	--holds
 	Definition Is_Universally_Related(s : SStr, t : SStr,
@@ -359,28 +368,28 @@ Precis String_Theory;
 		For all n:Z,
 			1 <= n + 1 <= |alpha| implies <DeString(Prt_Btwn(n, n + 1, alpha))> = Prt_Btwn(n,n+1,alpha);
 
-(*	2-12-26			
+(*	2-12-26
 	Corollary DeString_2_no_addition_no_Length:
 		For all alpha:SStr,
 			not(alpha = Empty_String) implies <DeString(Prt_Btwn(0, 1, alpha))> = Prt_Btwn(0,1,alpha);
-*)			
-			
+*)
+
 	Definition Is_Substring(a:SStr,b:SStr):B;
-	
+
 	Corollary Is_Substring_1a:
 		For all a,b:SStr,
 			Is_Substring(a,a o b);
-			
+
 	Corollary Is_Substring_1b:
 		For all a,b:SStr,
 			Is_Substring(b, a o b);
 	-- Is_Partial_Ordering(Is_Substring)
 	--	means it is reflexive, transitive, and antisymmetric,
-	
+
 	Corollary Is_Substring_3_reflexive:
 		For all a:SStr,
 			Is_Substring(a,a);
-			
+
 	Corollary Is_Substring_3_transitive:
 		For all a,b,c:SStr,
 			Is_Substring(a,b) and Is_Substring(b,c) implies Is_Substring(a,c);
@@ -390,43 +399,43 @@ Precis String_Theory;
 	Corollary Is_Substring_3_transitive_contrapositive_a:
 		For all a,b,c:SStr,
 		For all p:B,
-			(not(Is_Substring(a,c)) and Is_Substring(a, b o c) = p ) implies p = Is_Substring(a, b);	
-			
+			(not(Is_Substring(a,c)) and Is_Substring(a, b o c) = p ) implies p = Is_Substring(a, b);
+
 	Corollary Is_Substring_3_transitive_contrapositive_b:
 		For all a,b,c:SStr,
 		For all p:B,
-			(not(Is_Substring(a,c)) and Is_Substring(a, c o b) = p ) implies p = Is_Substring(a, b);	
+			(not(Is_Substring(a,c)) and Is_Substring(a, c o b) = p ) implies p = Is_Substring(a, b);
 *)
-				
+
 	Corollary Is_Substring_3_antisymmetric:
 		For all a,b:SStr,
 			(Is_Substring(a,b) and Is_Substring(b,a)) = (a = b);
-					
+
 	Corollary Is_Substring_4:
 		For all a,b:SStr,
 			Is_Substring(a,b) implies |a| <= |b|;
-	
+
 	Corollary Is_Substring_4_Without_Length_Operator:
-		For all a:SStr,		
+		For all a:SStr,
 			Is_Substring(a,Empty_String) = (a = Empty_String);
-					
+
 	Corollary Is_Substring_5:
 		For all a:SStr,
 		For all m,n:N,
 			Is_Substring(Prt_Btwn(m,n,a),a);
-			
+
 	-- These are specialized versions for Prime_Str
 
 (*	2-12-26
 	Corollary Is_Substring_Primes_1:
-		For all p,s:Prime_Str,		
-			(p = s) = Is_Substring(p,s);
+		For all p,s:Prime_Str,
+			(p = s) implies Is_Substring(p,s);
 *)
 
 --	2-12-26
 	Corollary Is_Substring_Primes_1a:
-		For all x, y: Entity,		
-			(<x> = <y>) = Is_Substring(<x>, <y>);
+		For all x, y: Entity,
+			(<x> = <y>) implies Is_Substring(<x>, <y>);
 
 						
 	Corollary Not_Eq_Str_Length:
