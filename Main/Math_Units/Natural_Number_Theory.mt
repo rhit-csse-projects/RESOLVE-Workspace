@@ -25,7 +25,7 @@ Theorem N1:
 
 -- N1 restated	
 Theorem N1_a:
-	For all k,m.n:N,
+	For all k,m,n:N,
 		(k + m) + n = k + (m + n);
 					
 Theorem N2:
