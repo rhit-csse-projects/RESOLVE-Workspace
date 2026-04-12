@@ -167,7 +167,7 @@ Corollary LTE_2: -- Is_Antisymmetric(<=)
 
 Corollary LTE_3: -- Is_Total(<=)
     For all m,n:Z,
-    	m <= n implies n <= m;
+    	m <= n or n <= m;
 
 Corollary LTE_3a: --Is_Reflexive(<=) -- implied by Is_Total
     For all n:Z,
