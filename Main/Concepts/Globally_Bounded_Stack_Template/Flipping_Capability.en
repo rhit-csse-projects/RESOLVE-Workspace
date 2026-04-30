@@ -1,0 +1,4 @@
+Enhancement Flipping_Capability for Globally_Bounded_Stack_Template;
+	Operation Flip(updates S: Stack);
+		ensures S = Reverse(#S);
+end Flipping_Capability;

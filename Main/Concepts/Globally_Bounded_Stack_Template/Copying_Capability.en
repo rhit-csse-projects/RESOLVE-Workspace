@@ -1,0 +1,4 @@
+Enhancement Copying_Capability for Globally_Bounded_Stack_Template;
+    Operation Copy_Stack(replaces S_Copy: Stack; restores S_Orig: Stack);
+        ensures S_Copy = S_Orig;
+end Copying_Capability;
