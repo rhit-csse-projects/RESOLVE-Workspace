@@ -196,10 +196,6 @@ Theorem Not_LTE_1:
 		not(1 <= n) = (n = 0);
 *)
 -- restatement below
-
-Theorem Not_LTE_1a:
-	For all n:N,
-		(n <= 1) implies (n = 0);
 		
 Theorem Zero_min:
 	For all n:N,
