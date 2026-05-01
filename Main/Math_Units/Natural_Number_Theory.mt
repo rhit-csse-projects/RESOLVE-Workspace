@@ -190,11 +190,9 @@ Theorem NN_LTE_Addition_b:
 		k + m <= n implies k <= m and m <= n;
 
 
-(*						
 Theorem Not_LTE_1:
 	For all n:N,
 		not(1 <= n) = (n = 0);
-*)
 -- restatement below
 		
 Theorem Zero_min:
