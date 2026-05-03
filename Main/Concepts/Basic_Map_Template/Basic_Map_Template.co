@@ -1,0 +1,47 @@
+Concept Basic_Map_Template (Type Key; Type Info; evaluates Max_Size: Integer;
+								definition Default_Info: Info);
+	requires 0 < Max_Size;
+	
+	(* Note: Under Construction! *)
+
+	Definition Dev_Ct (M: Map): N = 
+			||{ k: Key, M(k) /= Default_Info}||; 
+
+	Type Family Map is modeled by (Key -> Info); 
+		exemplar M;
+		constraint Dev_Ct (M) <= Max_Size;
+        initialization ensures Dev_Ct (M) = 0;
+	end;
+
+	Oper Define (restores k: Key; alters I: Info; updates M: Map);
+		requires	Dev_Ct (M) < Max_Size and 
+				M(k) = Default_Info and 
+				I /= Default_Info;
+		ensures 	M(k) = #I and 
+				(for all k1: Key, if k1 /= k then M(k1) = #M(k1));
+
+	Oper Undefine (restores k: Key; replaces I: Info; updates M: Map);
+		requires 	M(k) /= Default_Info;
+		ensures 	I = #M(k) and 
+				M(k) = Default_Info and
+				(for all k1: Key, if k1 /= k then M(k1) = #M(k1));
+
+	Oper Undefine_Any (replaces k: Key; replaces I: Info; updates M: Map);
+		requires 	Dev_Ct (M) > 0;
+		ensures 	#M(k) /= Default_Info and 
+				I = #M(k) and 
+				M(k) = Default_Info and
+				(for all k1: Key, if k1 /= k then M(k1) = #M(k1));
+
+	Oper Is_Default_Info (restores k: Key; restores M: Map): Boolean;
+		ensures	Is_Default_Info = (M(k) = Default_Info);
+
+	Oper Deviation_Count (restores M: Map): Integer;
+		ensures 	Deviation_Count = Dev_Ct (M);
+
+	Oper Rem_Capacity (restores M: Map): Integer;
+		ensures 	Rem_Capacity = Max_Size + (-Dev_Ct (M));
+
+	Oper Clear (clears M: Map);
+
+end Basic_Map_Template;

@@ -1,0 +1,4 @@
+Enhancement Reversal_Capability for Sequence_Template;
+    Operation Rev_Seq(updates S: Sequence);
+        ensures S = Reverse(#S);
+end Reversal_Capability;

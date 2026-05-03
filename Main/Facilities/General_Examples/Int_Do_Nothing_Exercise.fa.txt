@@ -1,0 +1,11 @@
+Facility Int_Do_Nothing_Exercise;
+	uses Integer_Template;
+
+	-- The operation below is intentionally buggy.
+	Operation Do_Nothing(restores I: Integer);
+	Procedure
+		Increment(I);
+		Decrement(I);
+	end Do_Nothing;
+
+end Int_Do_Nothing_Exercise;

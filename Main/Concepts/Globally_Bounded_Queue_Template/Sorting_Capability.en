@@ -1,0 +1,11 @@
+Enhancement Sorting_Capability(Definition LEQV(x, y : Entry) : B) for 
+		Globally_Bounded_Queue_Template;
+	uses String_Theory, Total_Preordering_Theory;
+	requires Is_Total_Preordering(LEQV);
+
+	(* Note: Under Construction! *)
+
+	Operation Sort(updates Q : Queue);
+		ensures Is_Conformal_With(LEQV, Q) and Is_Permutation(#Q, Q);
+
+end Sorting_Capability;

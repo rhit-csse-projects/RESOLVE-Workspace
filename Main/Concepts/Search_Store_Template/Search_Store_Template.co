@@ -1,0 +1,35 @@
+Concept Search_Store_Template (Type Key; evaluates Max_Capacity: Integer);
+    requires Max_Capacity > 0;
+	
+	(* Note: Under Construction! *)
+
+    Type Family Store is modeled by powerset(Key); 
+    	exemplar S;
+		constraint ||S|| <= Max_Capacity;
+            initialization ensures S = {};
+	end;
+
+	Oper Add (restores k: Key; updates S: Store);
+		requires ||S|| < Max_Capacity and k is_not_in S;
+		ensures S = #S union {k};
+
+	Oper Remove (restores k: Key; updates S: Store);
+		requires k is_in S;
+		ensures S = #S - {k};
+
+	Oper Remove_Any (replaces k: Key; updates S: Store);
+		requires ||S|| > 0;
+		ensures k is_in #S and S = #S - {k};
+
+	Oper Is_Present(restores k: Key; restores S: Store): Boolean;
+		ensures	Is_Present = (k is_in S);
+
+	Oper Key_Count (restores S: Store): Integer;
+		ensures Key_Count = (||S||);
+
+	Oper Rem_Capacity (restores S: Store): Integer;
+		ensures Rem_Capacity = (Max_Capacity - ||S||);
+
+	Oper Clear (clears S: Store);
+
+end Search_Store_Template;

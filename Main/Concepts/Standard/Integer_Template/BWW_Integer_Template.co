@@ -1,0 +1,97 @@
+
+Concept Integer_Template;
+    uses Integer_Theory;
+    requires min <= 0 < max;
+
+    Definition min: Z;
+    Definition max: Z;
+
+    Constraint min <= 0 and 0 < max;
+
+    Type Family Integer is modeled by Z;
+        exemplar i;
+        constraint min <= i and i <= max;
+        initialization ensures i = 0;
+
+    Operation Is_Zero(evaluates i: Integer): Boolean;
+        ensures	Is_Zero = ( i = 0 );
+
+    Operation Is_Not_Zero(evaluates i: Integer): Boolean;
+        ensures	Is_Not_Zero = ( i /= 0 );
+
+    Operation Increment(reassigns i: Integer);
+        requires i < max;
+        ensures	i = #i + 1;
+
+    Operation Decrement(reassigns i: Integer);
+        requires min < i;
+        ensures	i = #i - 1;
+
+    Operation Less_Or_Equal(evaluates i, j: Integer): Boolean;
+        ensures	Less_Or_Equal = ( i <= j );
+
+    Operation Less(evaluates i, j: Integer): Boolean;
+        ensures Less = ( i < j );
+
+    Operation Is_Greater(evaluates i, j: Integer): Boolean;
+        ensures Is_Greater = ( i > j );
+
+    Operation Greater_Or_Equal(evaluates i, j: Integer): Boolean;
+        ensures Greater_Or_Equal = ( i >= j );
+
+    Operation Add(reassigns i: Integer; restores j: Integer);
+        requires (min <= i + j) and (i + j <= max);
+        ensures	i = ( #i + j );
+
+    Operation Sum(evaluates i, j: Integer): Integer;
+        requires min <= i + j <= max;
+        ensures	Sum = ( i + j );
+
+    Operation Negate(evaluates i: Integer): Integer;
+        requires min <= -i <= max;
+        ensures Negative = ( -i );
+
+    Operation Difference(evaluates i, j: Integer): Integer;
+        requires min <= i - j <= max;
+        ensures Difference = ( i - j );
+
+    Operation Product(evaluates i, j: Integer): Integer;
+        requires min <= i * j <= max;
+        ensures Product = ( i * j );
+
+    Operation Power(evaluates i, j: Integer): Integer;
+        requires min <= i**j <= max;
+        ensures Power = ( i**j );
+
+    Operation Quotient(evaluates i, j: Integer): Integer;
+        ensures true; -- this needs a {{ }} expression
+
+    Operation Mod(evaluates i, j: Integer): Integer;
+
+    Operation Rem(evaluates i, j: Integer): Integer;
+
+    Operation Div(evaluates i, j: Integer): Integer;
+
+    Operation Are_Equal(evaluates i, j: Integer): Boolean;
+        ensures Are_Equal = (i = j);
+
+    Operation Are_Not_Equal(evaluates i, j: Integer): Boolean;
+        ensures Are_Not_Equal = (i /= j);
+
+    Operation Replica(restores i: Integer): Integer;
+        ensures Replica = (i);
+
+    Operation Read(replaces i: Integer);
+
+    Operation Write(evaluates i: Integer);
+
+    Operation Write_Line(evaluates i: Integer);
+
+-- 	Integer generator operations are included in this concept implicitly.
+-- 	The following function assignment statement, for example, 
+--		i := 10;
+-- 	invokes the following operation implicitly:
+--    	Operation Ten( ): Integer;
+--			ensures Ten = 10;
+
+end Integer_Template;

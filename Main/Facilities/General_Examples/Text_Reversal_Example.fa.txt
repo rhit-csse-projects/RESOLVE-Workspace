@@ -1,0 +1,39 @@
+Facility Text_Reversal_Example;
+    uses Text_Template;
+
+    Facility Text_Fac is Text_Template realized by Queue_Based_Realiz;
+
+    Operation Flip(updates S: Text);
+        ensures S = Reverse(#S);
+    Recursive Procedure
+        decreasing |S|;
+        Var C: Character;
+        If (not Is_Empty(S)) then
+            Remove(C, S);
+            Flip(S);
+            Add(C, S);
+        end;
+    end Flip;
+(*
+    Operation Main();
+    Procedure
+        Var C: Character;
+        Var T: Text;
+
+        Read(C);
+        Add(C, T);
+        Read(C);
+        Add(C, T);
+        Read(C);
+        Add(C, T);
+
+        Flip(T);
+
+        Remove(C, T);
+        Write(C);
+        Remove(C, T);
+        Write(C);
+        Remove(C, T);
+        Write(C); 
+    end Main; *)
+end Text_Reversal_Example;

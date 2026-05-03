@@ -1,0 +1,21 @@
+Facility Ptr_Stack_Test;
+	uses Globally_Bounded_Stack_Template;
+
+	Facility GBSF is Globally_Bounded_Stack_Template(Integer)
+		realized by Location_Linking_Realiz;
+
+	Operation Main();
+	Procedure
+		Var S: Stack;
+		Var I: Integer;
+
+		I := 5;
+		Push(I, S);
+		I := 10;
+		Push(I, S);
+		Pop(I, S);
+		Write(I);
+		Pop(I, S);
+		Write(I);
+	end Main;
+end Ptr_Stack_Test;

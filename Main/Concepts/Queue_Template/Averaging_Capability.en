@@ -1,0 +1,17 @@
+Enhancement Averaging_Capability(Definition AsInteger(e : Entry) : N)
+	for Queue_Template;
+	uses String_Theory;
+	requires For all e : Entry, min_int <= AsInteger(e) <= max_int;
+	
+	(* Note: Under Construction! *)
+
+	Operation Average(restores Q : Queue) : Integer;
+		requires |Q| < |min_int| / 2 and
+			|Q| < max_int / 2 and
+			0 <= Fold_String_Right(Sum, 0, Map(Q, AsInteger)) <= 
+				max_int and
+			Q /= Empty_String;
+		ensures Average = 
+			Fold_String_Right(Sum, 0, Map(Q, AsInteger)) / |Q|;
+
+end Averaging_Capability;

@@ -1,0 +1,24 @@
+Facility Invariant_Activity_0;
+	uses Integer_Ext_Theory;
+
+	-- This is an in-class activity for learning loop invariants
+	-- You will need to find and study Grid_Positioning_Template Concept to complete this activity
+	-- Activity: Edit only the maintaining clause (loop invariant) and attempt to verify
+
+	-- Facility or factory is an instantiation of a generic concept along with association of a particular implementation
+	Facility GPF is Grid_Positioning_Template(3, 3)
+		realized by Grid_Positioning_Realiz;
+
+	Operation Move_to_Max_Top (updates GP: Grid_Pos);
+		ensures GP.X = #GP.X and GP.Y = 3;
+	Procedure
+		While Is_OK_to_Move_Up(GP)
+			-- need to write an invariant about GP.X and an invariant about GP.Y
+			maintaining true;
+			decreasing 3 - GP.Y;
+		do
+			Move_Up(GP);
+		end;
+	end Move_to_Max_Top;
+
+end Invariant_Activity_0;

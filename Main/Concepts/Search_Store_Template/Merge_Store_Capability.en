@@ -1,0 +1,8 @@
+Enhancement Merge_Store_Capability for Search_Store_Template;
+
+    (* Note: Under Construction! *)
+
+     Operation Merge (updates S: Store; clears T: Store);   
+         requires ||S|| + ||T|| <= Max_Capacity;
+         ensures S = #S union #T; 
+end Merge_Store_Capability;

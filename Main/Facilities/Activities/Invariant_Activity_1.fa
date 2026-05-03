@@ -1,0 +1,24 @@
+Facility Invariant_Activity_1;
+	--This is an in-class activity for learning loop invariants
+	--Complete the maintaining clause (loop invariant) replacing true with a suitable invariant and verify
+	uses Integer_Template, String_Theory;
+
+	Facility Queue_Fac is Queue_Template(Integer, 3)
+		realized by Circular_Array_Realiz;
+		
+	Operation Append(updates P: Queue; clears Q: Queue);
+		requires |P| + |Q| <= 3;
+		ensures P = #P o #Q;
+	Procedure
+		Var I: Integer;
+
+		While ( 1 <= Length(Q) )
+			maintaining true;
+			decreasing |Q|;
+		do
+			Dequeue(I, Q);
+			Enqueue(I, P);
+		end;
+	end Append;
+
+end Invariant_Activity_1;

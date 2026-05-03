@@ -1,0 +1,17 @@
+Facility Int_Max_Example_Facility;
+	uses Integer_Template;
+    
+	-- The operation below is intentionally buggy.
+	Operation Max(restores I: Integer; restores J: Integer) : Integer;
+		ensures (Max = I or Max = J) and (Max >= I and Max >= J);
+	Procedure
+		Max := I + J;
+		If (I > J) then
+			Max := Max - J;
+		end;
+		If (J > I) then
+			Max := Max - I;
+		end;
+	end Max;
+
+end Int_Max_Example_Facility;

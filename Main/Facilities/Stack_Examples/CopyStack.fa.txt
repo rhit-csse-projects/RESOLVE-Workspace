@@ -1,0 +1,39 @@
+-- example of a stack of Integers that has a copy enhancement and can be printed
+-- a key point is that the copy shows how to pass an operation as a parameter
+Facility CopyStack;
+	uses String_Theory;
+
+	Operation Copy_Integer(replaces C: Integer; restores Orig: Integer);
+		ensures C = Orig;
+	Procedure
+		C := Orig;
+	end Copy_Integer;
+
+	Facility Copy_Stack_Fac is Stack_Template(Integer, 5)
+			realized by Array_Realiz
+		enhanced by Copying_Capability
+			realized by Obvious_CC_Realiz(Copy_Integer)
+		enhanced by Writing_Capability
+			realized by Obvious_Writing_Realiz(Std_Integer_Fac.Write);
+
+	Operation Main();
+	Procedure
+		Var S1, S2: Stack;
+		Var I: Integer;
+
+		I := 47;
+		Push(I, S1);
+		I := 53;
+		Push(I, S1);
+		I := 59;
+		Push(I, S1);
+		Write(S1);
+
+		Copy_Stack(S2,S1);
+		Write_Line("");
+		Write(S1);
+		Write_Line("");
+		Write(S2);
+	end Main;
+
+end CopyStack;

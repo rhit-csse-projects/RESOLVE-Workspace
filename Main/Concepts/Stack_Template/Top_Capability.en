@@ -1,0 +1,5 @@
+Enhancement Top_Capability for Stack_Template;
+    Operation Top(restores S: Stack): Entry;
+        requires 1 <= |S|;
+        ensures Top = DeString(Prt_Btwn(0, 1, S));
+end Top_Capability;

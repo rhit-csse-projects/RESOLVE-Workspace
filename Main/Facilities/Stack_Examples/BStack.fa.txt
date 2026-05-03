@@ -1,0 +1,24 @@
+-- example of a stack of Boolean's
+Facility BStack;
+	uses String_Theory, Integer_Theory;
+
+	Facility Boolean_Stack_Fac is Stack_Template(Boolean, 5)
+			realized by Array_Realiz
+		enhanced by Writing_Capability
+			realized by Obvious_Writing_Realiz(Std_Boolean_Fac.Write);
+
+	Operation Main();
+	Procedure
+		Var S1: Stack;
+		Var b: Boolean;
+
+		b := True();
+		Push(b, S1);
+		b := False();
+		Push(b, S1);
+		b := True();
+		Push(b, S1);
+		Write(S1);
+	end Main;
+
+end BStack;

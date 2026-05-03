@@ -1,0 +1,4 @@
+Enhancement Transfer_Capability for Globally_Bounded_Stack_Template;
+	Operation Transfer(clears Source : Stack; replaces Destination : Stack);
+		ensures Destination = #Source;
+end Transfer_Capability;

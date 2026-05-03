@@ -1,0 +1,15 @@
+Concept Abstraction_Example;
+	-- Study the realizations for activities
+	
+	Type Family Switch is modeled by B;
+		exemplar S;
+		initialization ensures S = true;
+	end;
+
+	Operation Toggle(updates S: Switch);
+		ensures S = not #S;
+
+	Operation Is_On(restores S: Switch): Boolean;
+		ensures Is_On = S;
+
+end Abstraction_Example;

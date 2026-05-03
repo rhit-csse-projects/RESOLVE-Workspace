@@ -1,0 +1,55 @@
+Concept Prioritizer_Template( type Entry; evaluates Max_Capacity: Integer; definition LEQV(x,y: Entry): B);
+    requires Max_Capacity > 0 and Is_Total_Preordering(LEQV);
+	
+	(* Note: Under Construction! *)
+
+    --------------------------------------------------------------
+
+    Definition Total_Entry_Ct(P: Prioritizer): N = (Sum x: Entry, P.Entry_Count(x));
+    	    
+    Type Family Prioritizer is modeled by Cart_Prod
+            Entry_Count: Entry -> N;
+            Accepting: B;
+        end;
+        exemplar P;
+        constraint Total_Entry_Ct(P) <= Max_Capacity;
+        initialization ensures Total_Entry_Ct(P) = 0 and P.Accepting;
+	end;
+
+    --------------------------------------------------------------
+
+    Operation Add_Entry(alters E: Entry; updates P: Prioritizer);
+        requires Total_Entry_Ct(P) < Max_Capacity and P.Accepting;
+        ensures P.Entry_Count = lambda (F: Entry).({{#P.Entry_Count(F) + 1 if F = #E; #P.Entry_Count(F) otherwise;}}) and
+                P.Accepting;
+
+    Operation Change_Mode(updates P: Prioritizer);
+       ensures P.Entry_Count = #P.Entry_Count and P.Accepting = not #P.Accepting;
+
+    Definition Less(x,y: Entry): B = LEQV(x,y) and not LEQV(y,x);
+
+    Definition Lesser_Entry_Ct(S: Entry, P: Prioritizer): N = (Sum E: Entry where Less(E, S), P.Entry_Count(E));
+
+    Operation Remove_A_Smallest_Entry(replaces S: Entry;
+                                      updates P: Prioritizer);
+        requires Total_Entry_Ct(P) > 0 and not P.Accepting; 
+        ensures P.Entry_Count = lambda (F: Entry).({{#P.Entry_Count(F) - 1 if F = S; #P.Entry_Count(F) otherwise;}}) and
+            Lesser_Entry_Ct(S, P) = 0 and not P.Accepting;
+
+    Operation Remove_Any_Entry(replaces E: Entry; updates P: Prioritizer);
+        requires Total_Entry_Ct(P) > 0;
+        ensures P.Entry_Count = lambda (F: Entry).({{#P.Entry_Count(F) - 1 if F = E; #P.Entry_Count(F) otherwise;}}) and 
+            P.Accepting = #P.Accepting;
+                
+    Operation Is_Accepting(restores P: Prioritizer): Boolean;
+        ensures Is_Accepting = (P.Accepting);
+
+    Operation Total_Entry_Count(restores P: Prioritizer): Integer;
+        ensures Total_Entry_Count = Total_Entry_Ct(P);
+
+    Operation Rem_Capacity(restores P: Prioritizer): Integer;
+        ensures Rem_Capacity = (Max_Capacity - Total_Entry_Ct(P));
+
+    Operation Clear(clears P: Prioritizer);
+
+end Prioritizer_Template;

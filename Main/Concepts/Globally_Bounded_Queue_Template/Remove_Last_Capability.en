@@ -1,0 +1,7 @@
+Enhancement Remove_Last_Capability for Globally_Bounded_Queue_Template;
+
+	Operation Remove_Last(updates Q: Queue; replaces E: Entry);
+		requires not (Q = Empty_String);
+		ensures #Q = Q o <E>;
+
+end Remove_Last_Capability;

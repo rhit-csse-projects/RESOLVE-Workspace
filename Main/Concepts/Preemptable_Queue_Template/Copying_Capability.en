@@ -1,0 +1,4 @@
+Enhancement Copying_Capability for Preemptable_Queue_Template;
+    Operation Copy_Queue(restores Q: P_Queue; replaces Q_Copy: P_Queue);
+        ensures Q_Copy = Q;
+end Copying_Capability;

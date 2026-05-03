@@ -1,0 +1,45 @@
+Concept Globally_Bounded_List_Template(type Entry);
+	uses String_Theory;
+
+	Type Family List is modeled by Cart_Prod
+			Prec, Rem: Str(Entry);
+		end;
+		exemplar P;
+		initialization
+			ensures P.Prec = Empty_String and P.Rem = Empty_String;
+	end;
+
+	Oper Advance( upd P: List );
+		requires not(P.Rem = Empty_String);
+		ensures P.Prec = #P.Prec o Prt_Btwn(0, 1, #P.Rem) and 
+				P.Rem = Prt_Btwn(1, |#P.Rem|, #P.Rem);
+
+	Oper Reset( upd P: List );
+		ensures P.Prec = Empty_String and P.Rem = #P.Prec o #P.Rem;
+
+	Oper Is_Rem_Empty( rest P: List ): Boolean;
+		ensures Is_Rem_Empty = ( P.Rem = Empty_String );
+
+	Oper Insert( alt New_Entry: Entry; upd P: List );
+		ensures P.Prec = #P.Prec and P.Rem = <#New_Entry> o #P.Rem;
+
+	Oper Remove( rpl Entry_Removed: Entry; upd P: List );
+		requires not(P.Rem = Empty_String);
+		ensures P.Prec = #P.Prec and
+				Entry_Removed = DeString(Prt_Btwn(0, 1, #P.Rem)) and
+				P.Rem =  Prt_Btwn(1, |#P.Rem|, #P.Rem);
+
+	Oper Advance_to_End( upd P: List );
+		ensures P.Prec = #P.Prec o #P.Rem and 
+				P.Rem = Empty_String;
+
+	Oper Swap_Remainders( upd P, Q: List );
+		ensures P.Prec = #P.Prec and Q.Prec = #Q.Prec and
+				P.Rem = #Q.Rem and Q.Rem = #P.Rem;
+
+	Oper Is_Prec_Empty( rest P: List ): Boolean;
+		ensures Is_Prec_Empty = ( P.Prec = Empty_String );
+
+	Oper Clear( clr P: List );
+	
+end Globally_Bounded_List_Template;

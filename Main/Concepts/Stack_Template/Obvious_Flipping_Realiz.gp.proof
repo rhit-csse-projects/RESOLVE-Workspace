@@ -1,0 +1,663 @@
+Proofs for Obvious_Flipping_Realiz.rb generated Wed Apr 22 15:36:49 EDT 2026
+
+================================= Summary =================================
+
+[Prover Settings]
+    Prover: General Purpose Prover
+    Timeout: 5000 ms
+    Number of Tries Before Halting: -1
+
+[VC Results]
+    VC 0_1     .........     proved in 10 ms.
+    VC 0_2     .........     proved in 0 ms.
+    VC 0_3     .........     not proved in 14 ms.
+    VC 0_4     .........     proved in 2 ms.
+    VC 0_5     .........     proved in 6 ms.
+    VC 1_1     .........     proved in 2 ms.
+    VC 1_2     .........     not proved in 5 ms.
+
+[Aggregate Results]
+    Total number of proved VCs: 5
+    Total number of unproved and skipped VCs: 2
+    Total elapsed time in generating proofs: 48 ms
+
+========================= Proof Generation Details  =========================
+
+    Enhancement Realization Name:   Obvious_Flipping_Realiz
+    Enhancement Name:               Flipping_Capability
+    Concept Name:                   Stack_Template
+
+=============================================================================
+
+=================================== 0_1 ===================================
+
+VC 0_1:
+Base Case of the Invariant of While Statement at Obvious_Flipping_Realiz.rb(8:15)
+
+Goal:
+(S = (Reverse(Empty_String) o S))
+
+Given(s):
+1. (|S| <= Max_Depth)
+2. (1 <= Max_Depth)
+3. (min_int <= Max_Depth)
+4. (Max_Depth <= max_int)
+5. (min_int <= 0)
+6. (1 <= max_int)
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S -> 3
+    |_| -> 4
+    Max_Depth -> 5
+    1 -> 6
+    min_int -> 7
+    max_int -> 8
+    0 -> 9
+    Empty_String -> 10
+    Reverse -> 11
+    o -> 12
+
+_____________________
+
+[Applied Theorems]:
+LTE_1a:Natural_Number_Theory
+Reverse_Expanded_Definition_i:String_Theory
+Reverse_8:String_Theory
+LTE_1a:Integer_Theory
+Abs_Val_1:Integer_Theory
+Concatenation_1_a:String_Theory
+Reverse_3:String_Theory
+
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: S ) 
+CC2 -> (CR2: |_| CC1) 
+CC3 -> (CR3: Max_Depth ) 
+CC4 -> (CR4: <= CC2, CC3) 
+CC5 -> (CR5: 1 ) 
+CC6 -> (CR6: <= CC5, CC3) 
+CC7 -> (CR7: min_int ) 
+CC8 -> (CR8: <= CC7, CC3) 
+CC9 -> (CR9: max_int ) 
+CC10 -> (CR10: <= CC3, CC9) 
+CC11 -> (CR11: 0 ) 
+CC12 -> (CR12: <= CC7, CC11) 
+CC13 -> (CR13: <= CC5, CC9) 
+CC14 -> (CR14: Empty_String ) | (CR15: Reverse CC14) 
+CC15 -> (CR14: Empty_String ) | (CR15: Reverse CC14) 
+CC16 -> (CR16: o CC14, CC1) 
+CC17 -> (CR17: = CC1, CC16) 
+CC18 -> (CR18: <= CC2, CC9) 
+CC19 -> (CR20: |_| CC19) | (CR19: Reverse CC1) 
+CC20 -> (CR20: |_| CC19) | (CR19: Reverse CC1) 
+
+=================================== 0_2 ===================================
+
+VC 0_2:
+Requires Clause for Pop at Obvious_Flipping_Realiz.rb(11:3)
+
+Goal:
+(1 <= |S''|)
+
+Given(s):
+1. (1 <= |S''|)
+2. (S = (Reverse(Temp'') o S''))
+3. (|S| <= Max_Depth)
+4. (1 <= Max_Depth)
+5. (min_int <= Max_Depth)
+6. (Max_Depth <= max_int)
+7. (min_int <= 0)
+8. (1 <= max_int)
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    S'' -> 4
+    |_| -> 5
+    S -> 6
+    Temp'' -> 7
+    Reverse -> 8
+    o -> 9
+    Max_Depth -> 10
+    min_int -> 11
+    max_int -> 12
+    0 -> 13
+
+_____________________
+
+[Applied Theorems]:
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: 1 ) 
+CC2 -> (CR2: S'' ) 
+CC3 -> (CR3: |_| CC2) 
+CC4 -> (CR4: <= CC1, CC3) [35m(succedent)[0m
+CC5 -> (CR5: S ) | (CR8: o CC7, CC2) 
+CC6 -> (CR6: Temp'' ) 
+CC7 -> (CR7: Reverse CC6) 
+CC8 -> (CR5: S ) | (CR8: o CC7, CC2) 
+CC9 -> (CR9: |_| CC5) 
+CC10 -> (CR10: Max_Depth ) 
+CC11 -> (CR11: <= CC9, CC10) 
+CC12 -> (CR12: <= CC1, CC10) 
+CC13 -> (CR13: min_int ) 
+CC14 -> (CR14: <= CC13, CC10) 
+CC15 -> (CR15: max_int ) 
+CC16 -> (CR16: <= CC10, CC15) 
+CC17 -> (CR17: 0 ) 
+CC18 -> (CR18: <= CC13, CC17) 
+CC19 -> (CR19: <= CC1, CC15) 
+
+=================================== 0_3 ===================================
+
+VC 0_3:
+Requires Clause for Push at Obvious_Flipping_Realiz.rb(12:3)
+
+Goal:
+((1 + |Temp''|) <= Max_Depth)
+
+Given(s):
+1. (1 <= |S''|)
+2. (S = (Reverse(Temp'') o S''))
+3. (1 <= Max_Depth)
+4. (min_int <= Max_Depth)
+5. (Max_Depth <= max_int)
+6. (|S| <= Max_Depth)
+7. (min_int <= 0)
+8. (1 <= max_int)
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    1 -> 3
+    S'' -> 4
+    |_| -> 5
+    S -> 6
+    Temp'' -> 7
+    Reverse -> 8
+    o -> 9
+    Max_Depth -> 10
+    min_int -> 11
+    max_int -> 12
+    0 -> 13
+    + -> 14
+
+_____________________
+
+[Applied Theorems]:
+N4_a:Natural_Number_Theory
+NN_LTE_Addition_b:Natural_Number_Theory
+Str_Length_2:String_Theory
+Reverse_8:String_Theory
+I10_Def:Integer_Theory
+Abs_Val_1:Integer_Theory
+LTE_6_b:Integer_Theory
+LTE_1a:Natural_Number_Theory
+LTE_1a:Integer_Theory
+Reverse_2:String_Theory
+
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: 1 ) 
+CC2 -> (CR2: S'' ) 
+CC3 -> (CR3: |_| CC2) 
+CC4 -> (CR4: <= CC1, CC3) 
+CC5 -> (CR5: S ) | (CR8: o CC7, CC2) 
+CC6 -> (CR6: Temp'' ) 
+CC7 -> (CR26: |_| CC7 [NEXT: CR46]), (CR46: |_| CC7 [NEXT: CR62]), (CR62: |_| CC7 [NEXT: CR77]), (CR77: |_| CC7) | (CR7: Reverse CC6) 
+CC8 -> (CR5: S ) | (CR8: o CC7, CC2) 
+CC9 -> (CR9: Max_Depth ) 
+CC10 -> (CR10: <= CC1, CC9) 
+CC11 -> (CR11: min_int ) 
+CC12 -> (CR12: <= CC11, CC9) 
+CC13 -> (CR13: max_int ) 
+CC14 -> (CR14: <= CC9, CC13) 
+CC15 -> (CR15: |_| CC5) | (CR32: + CC7, CC28) | (CR27: + CC7, CC3) 
+CC16 -> (CR16: <= CC15, CC9) 
+CC17 -> (CR17: 0 ) 
+CC18 -> (CR18: <= CC11, CC17) 
+CC19 -> (CR19: <= CC1, CC13) 
+CC20 -> (CR20: |_| CC6) 
+CC21 -> (CR21: + CC1, CC20 [NEXT: CR23]), (CR23: + CC20, CC1) 
+CC22 -> (CR22: <= CC21, CC9) [35m(succedent)[0m
+CC23 -> (CR21: + CC1, CC20 [NEXT: CR23]), (CR23: + CC20, CC1) 
+CC24 -> (CR24: <= CC1, CC20) 
+CC25 -> (CR25: <= CC20, CC9) 
+CC26 -> (CR26: |_| CC7 [NEXT: CR46]), (CR46: |_| CC7 [NEXT: CR62]), (CR62: |_| CC7 [NEXT: CR77]), (CR77: |_| CC7) | (CR7: Reverse CC6) 
+CC27 -> (CR15: |_| CC5) | (CR32: + CC7, CC28) | (CR27: + CC7, CC3) 
+CC28 -> (CR29: |_| CC28 [NEXT: CR33]), (CR33: |_| CC28) | (CR28: Reverse CC2) 
+CC29 -> (CR29: |_| CC28 [NEXT: CR33]), (CR33: |_| CC28) | (CR28: Reverse CC2) 
+CC30 -> (CR30: <= CC7, CC3) 
+CC31 -> (CR31: <= CC3, CC9) 
+CC32 -> (CR15: |_| CC5) | (CR32: + CC7, CC28) | (CR27: + CC7, CC3) 
+CC33 -> (CR29: |_| CC28 [NEXT: CR33]), (CR33: |_| CC28) | (CR28: Reverse CC2) 
+CC34 -> (CR34: + CC26, CC1) 
+CC35 -> (CR35: <= CC34, CC9) 
+CC36 -> (CR36: <= CC7, CC28) 
+CC37 -> (CR37: <= CC28, CC9) 
+CC38 -> (CR38: o CC7, CC2) 
+CC39 -> (CR39: |_| CC38) | (CR41: + CC40, CC28) 
+CC40 -> (CR40: |_| CC7) 
+CC41 -> (CR39: |_| CC38) | (CR41: + CC40, CC28) 
+CC42 -> (CR42: o CC7, CC28) 
+CC43 -> (CR43: |_| CC42) | (CR45: + CC44, CC28) 
+CC44 -> (CR44: |_| CC7) 
+CC45 -> (CR43: |_| CC42) | (CR45: + CC44, CC28) 
+CC46 -> (CR26: |_| CC7 [NEXT: CR46]), (CR46: |_| CC7 [NEXT: CR62]), (CR62: |_| CC7 [NEXT: CR77]), (CR77: |_| CC7) | (CR7: Reverse CC6) 
+CC47 -> (CR47: |_| CC7) 
+CC48 -> (CR48: |_| CC47 [NEXT: CR49]), (CR49: |_| CC7) 
+CC49 -> (CR48: |_| CC47 [NEXT: CR49]), (CR49: |_| CC7) 
+CC50 -> (CR50: <= CC7, CC28) 
+CC51 -> (CR51: o CC7, CC2) 
+CC52 -> (CR52: |_| CC51) | (CR54: + CC53, CC28) 
+CC53 -> (CR53: |_| CC7) 
+CC54 -> (CR52: |_| CC51) | (CR54: + CC53, CC28) 
+CC55 -> (CR55: o CC7, CC28) 
+CC56 -> (CR56: |_| CC55) | (CR58: + CC57, CC28) 
+CC57 -> (CR57: |_| CC7) 
+CC58 -> (CR56: |_| CC55) | (CR58: + CC57, CC28) 
+CC59 -> (CR59: o CC2, CC6) 
+CC60 -> (CR60: Reverse CC59) | (CR76: o CC7, CC28) | (CR75: o CC7, CC28) | (CR61: o CC7, CC28) 
+CC61 -> (CR60: Reverse CC59) | (CR76: o CC7, CC28) | (CR75: o CC7, CC28) | (CR61: o CC7, CC28) 
+CC62 -> (CR26: |_| CC7 [NEXT: CR46]), (CR46: |_| CC7 [NEXT: CR62]), (CR62: |_| CC7 [NEXT: CR77]), (CR77: |_| CC7) | (CR7: Reverse CC6) 
+CC63 -> (CR63: |_| CC7) 
+CC64 -> (CR64: |_| CC63 [NEXT: CR65]), (CR65: |_| CC7) 
+CC65 -> (CR64: |_| CC63 [NEXT: CR65]), (CR65: |_| CC7) 
+CC66 -> (CR66: <= CC7, CC28) 
+CC67 -> (CR67: o CC7, CC2) 
+CC68 -> (CR68: |_| CC67) | (CR70: + CC69, CC28) 
+CC69 -> (CR69: |_| CC7) 
+CC70 -> (CR68: |_| CC67) | (CR70: + CC69, CC28) 
+CC71 -> (CR71: o CC7, CC28) 
+CC72 -> (CR72: |_| CC71) | (CR74: + CC73, CC28) 
+CC73 -> (CR73: |_| CC7) 
+CC74 -> (CR72: |_| CC71) | (CR74: + CC73, CC28) 
+CC75 -> (CR60: Reverse CC59) | (CR76: o CC7, CC28) | (CR75: o CC7, CC28) | (CR61: o CC7, CC28) 
+CC76 -> (CR60: Reverse CC59) | (CR76: o CC7, CC28) | (CR75: o CC7, CC28) | (CR61: o CC7, CC28) 
+CC77 -> (CR26: |_| CC7 [NEXT: CR46]), (CR46: |_| CC7 [NEXT: CR62]), (CR62: |_| CC7 [NEXT: CR77]), (CR77: |_| CC7) | (CR7: Reverse CC6) 
+CC78 -> (CR78: |_| CC7) 
+CC79 -> (CR79: |_| CC78 [NEXT: CR80]), (CR80: |_| CC7) 
+CC80 -> (CR79: |_| CC78 [NEXT: CR80]), (CR80: |_| CC7) 
+
+=================================== 0_4 ===================================
+
+VC 0_4:
+Inductive Case of Invariant of While Statement at Obvious_Flipping_Realiz.rb(8:15)
+
+Goal:
+(S = (Reverse((<Next_Entry''> o Temp'')) o S'))
+
+Given(s):
+1. (S'' = (<Next_Entry''> o S'))
+2. (1 <= |S''|)
+3. (S = (Reverse(Temp'') o S''))
+4. (|S| <= Max_Depth)
+5. (1 <= Max_Depth)
+6. (min_int <= Max_Depth)
+7. (Max_Depth <= max_int)
+8. (min_int <= 0)
+9. (1 <= max_int)
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S'' -> 3
+    Next_Entry'' -> 4
+    <_> -> 5
+    S' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    S -> 10
+    Temp'' -> 11
+    Reverse -> 12
+    Max_Depth -> 13
+    min_int -> 14
+    max_int -> 15
+    0 -> 16
+
+_____________________
+
+[Applied Theorems]:
+Concatenation_2:String_Theory
+Reverse_1a:String_Theory
+Reverse_2:String_Theory
+Reverse_8:String_Theory
+Abs_Val_1:Integer_Theory
+
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: S'' ) | (CR5: o CC3, CC4) 
+CC2 -> (CR2: Next_Entry'' ) 
+CC3 -> (CR3: <_> CC2) | (CR30: Reverse CC3) 
+CC4 -> (CR4: S' ) 
+CC5 -> (CR1: S'' ) | (CR5: o CC3, CC4) 
+CC6 -> (CR6: 1 ) 
+CC7 -> (CR7: |_| CC1) 
+CC8 -> (CR8: <= CC6, CC7) 
+CC9 -> (CR12: o CC11, CC1 [NEXT: CR29]), (CR29: o CC28, CC4) | (CR9: S ) 
+CC10 -> (CR10: Temp'' ) 
+CC11 -> (CR11: Reverse CC10) 
+CC12 -> (CR12: o CC11, CC1 [NEXT: CR29]), (CR29: o CC28, CC4) | (CR9: S ) 
+CC13 -> (CR13: |_| CC9) 
+CC14 -> (CR14: Max_Depth ) 
+CC15 -> (CR15: <= CC13, CC14) 
+CC16 -> (CR16: <= CC6, CC14) 
+CC17 -> (CR17: min_int ) 
+CC18 -> (CR18: <= CC17, CC14) 
+CC19 -> (CR19: max_int ) 
+CC20 -> (CR20: <= CC14, CC19) 
+CC21 -> (CR21: 0 ) 
+CC22 -> (CR22: <= CC17, CC21) 
+CC23 -> (CR23: <= CC6, CC19) 
+CC24 -> (CR24: o CC3, CC10) 
+CC25 -> (CR28: o CC11, CC3) | (CR25: Reverse CC24) 
+CC26 -> (CR26: o CC25, CC4) 
+CC27 -> (CR27: = CC9, CC26) 
+CC28 -> (CR28: o CC11, CC3) | (CR25: Reverse CC24) 
+CC29 -> (CR12: o CC11, CC1 [NEXT: CR29]), (CR29: o CC28, CC4) | (CR9: S ) 
+CC30 -> (CR3: <_> CC2) | (CR30: Reverse CC3) 
+
+=================================== 0_5 ===================================
+
+VC 0_5:
+Termination of While Statement at Obvious_Flipping_Realiz.rb(9:3)
+
+Goal:
+((1 + |S'|) <= |S''|)
+
+Given(s):
+1. (S'' = (<Next_Entry''> o S'))
+2. (1 <= |S''|)
+3. (S = (Reverse(Temp'') o S''))
+4. (|S| <= Max_Depth)
+5. (1 <= Max_Depth)
+6. (min_int <= Max_Depth)
+7. (Max_Depth <= max_int)
+8. (min_int <= 0)
+9. (1 <= max_int)
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S'' -> 3
+    Next_Entry'' -> 4
+    <_> -> 5
+    S' -> 6
+    o -> 7
+    1 -> 8
+    |_| -> 9
+    S -> 10
+    Temp'' -> 11
+    Reverse -> 12
+    Max_Depth -> 13
+    min_int -> 14
+    max_int -> 15
+    0 -> 16
+    + -> 17
+
+_____________________
+
+[Applied Theorems]:
+N4_a:Natural_Number_Theory
+NN_LTE_Addition_b:Natural_Number_Theory
+Concatenation_2:String_Theory
+Str_Length_2:String_Theory
+Reverse_1a:String_Theory
+Reverse_8:String_Theory
+I10_Def:Integer_Theory
+Abs_Val_1:Integer_Theory
+N10_b:Natural_Number_Theory
+Singleton_Str_2a:String_Theory
+Reverse_2:String_Theory
+Reverse_3:String_Theory
+LTE_6_def:Integer_Theory
+
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: S'' ) | (CR5: o CC3, CC4) 
+CC2 -> (CR2: Next_Entry'' ) 
+CC3 -> (CR3: <_> CC2) | (CR6: 1 ) | (CR34: Reverse CC3) 
+CC4 -> (CR4: S' ) 
+CC5 -> (CR1: S'' ) | (CR5: o CC3, CC4) 
+CC6 -> (CR3: <_> CC2) | (CR6: 1 ) | (CR34: Reverse CC3) 
+CC7 -> (CR7: |_| CC1) | (CR33: + CC32, CC24) 
+CC8 -> (CR8: <= CC3, CC7) 
+CC9 -> (CR12: o CC11, CC1 [NEXT: CR31]), (CR31: o CC30, CC4) | (CR9: S ) 
+CC10 -> (CR10: Temp'' ) 
+CC11 -> (CR11: Reverse CC10) 
+CC12 -> (CR12: o CC11, CC1 [NEXT: CR31]), (CR31: o CC30, CC4) | (CR9: S ) 
+CC13 -> (CR13: |_| CC9) 
+CC14 -> (CR14: Max_Depth ) 
+CC15 -> (CR15: <= CC13, CC14) 
+CC16 -> (CR16: <= CC3, CC14) 
+CC17 -> (CR17: min_int ) 
+CC18 -> (CR18: <= CC17, CC14) 
+CC19 -> (CR19: max_int ) 
+CC20 -> (CR20: <= CC14, CC19) 
+CC21 -> (CR21: 0 ) 
+CC22 -> (CR22: <= CC17, CC21) 
+CC23 -> (CR23: <= CC3, CC19) 
+CC24 -> (CR24: |_| CC4) 
+CC25 -> (CR40: o CC39, CC3) | (CR41: |_| CC25) | (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+CC26 -> (CR26: <= CC25, CC7) [35m(succedent)[0m
+CC27 -> (CR40: o CC39, CC3) | (CR41: |_| CC25) | (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+CC28 -> (CR28: <= CC6, CC24) 
+CC29 -> (CR29: <= CC24, CC7) 
+CC30 -> (CR30: o CC11, CC3) 
+CC31 -> (CR12: o CC11, CC1 [NEXT: CR31]), (CR31: o CC30, CC4) | (CR9: S ) 
+CC32 -> (CR32: |_| CC3) 
+CC33 -> (CR7: |_| CC1) | (CR33: + CC32, CC24) 
+CC34 -> (CR3: <_> CC2) | (CR6: 1 ) | (CR34: Reverse CC3) 
+CC35 -> (CR40: o CC39, CC3) | (CR41: |_| CC25) | (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+CC36 -> (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+CC37 -> (CR37: <= CC3, CC32) 
+CC38 -> (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+CC39 -> (CR39: Reverse CC4) 
+CC40 -> (CR40: o CC39, CC3) | (CR41: |_| CC25) | (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+CC41 -> (CR40: o CC39, CC3) | (CR41: |_| CC25) | (CR36: |_| CC25) | (CR35: Reverse CC1) | (CR38: + CC3, CC24) | (CR25: + CC6, CC24 [NEXT: CR27]), (CR27: + CC24, CC3) 
+
+=================================== 1_1 ===================================
+
+VC 1_1:
+Base Case of the Invariant of While Statement at Obvious_Flipping_Realiz.rb(8:15)
+
+Goal:
+(S = (Reverse(Empty_String) o S))
+
+Given(s):
+1. (|S| <= Max_Depth)
+2. (1 <= Max_Depth)
+3. (min_int <= Max_Depth)
+4. (Max_Depth <= max_int)
+5. (min_int <= 0)
+6. (1 <= max_int)
+
+
+[Prover Result]: Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S -> 3
+    |_| -> 4
+    Max_Depth -> 5
+    1 -> 6
+    min_int -> 7
+    max_int -> 8
+    0 -> 9
+    Empty_String -> 10
+    Reverse -> 11
+    o -> 12
+
+_____________________
+
+[Applied Theorems]:
+LTE_1a:Natural_Number_Theory
+Reverse_Expanded_Definition_i:String_Theory
+Reverse_8:String_Theory
+LTE_1a:Integer_Theory
+Abs_Val_1:Integer_Theory
+Concatenation_1_a:String_Theory
+Reverse_3:String_Theory
+
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: S ) 
+CC2 -> (CR2: |_| CC1) 
+CC3 -> (CR3: Max_Depth ) 
+CC4 -> (CR4: <= CC2, CC3) 
+CC5 -> (CR5: 1 ) 
+CC6 -> (CR6: <= CC5, CC3) 
+CC7 -> (CR7: min_int ) 
+CC8 -> (CR8: <= CC7, CC3) 
+CC9 -> (CR9: max_int ) 
+CC10 -> (CR10: <= CC3, CC9) 
+CC11 -> (CR11: 0 ) 
+CC12 -> (CR12: <= CC7, CC11) 
+CC13 -> (CR13: <= CC5, CC9) 
+CC14 -> (CR14: Empty_String ) | (CR15: Reverse CC14) 
+CC15 -> (CR14: Empty_String ) | (CR15: Reverse CC14) 
+CC16 -> (CR16: o CC14, CC1) 
+CC17 -> (CR17: = CC1, CC16) 
+CC18 -> (CR18: <= CC2, CC9) 
+CC19 -> (CR20: |_| CC19) | (CR19: Reverse CC1) 
+CC20 -> (CR20: |_| CC19) | (CR19: Reverse CC1) 
+
+=================================== 1_2 ===================================
+
+VC 1_2:
+Ensures Clause of Flip [After Logical Reduction(s)] at Obvious_Flipping_Realiz.rb(3:11)
+
+Goal:
+(Temp' = Reverse(S)) or 
+(1 <= |S'|)
+
+Given(s):
+1. (S = (Reverse(Temp') o S'))
+2. (|S| <= Max_Depth)
+3. (1 <= Max_Depth)
+4. (min_int <= Max_Depth)
+5. (Max_Depth <= max_int)
+6. (min_int <= 0)
+7. (1 <= max_int)
+
+
+[Prover Result]: Not Proved
+_____________________
+
+[Label(s)]:
+    <= -> 1
+    = -> 2
+    S -> 3
+    Temp' -> 4
+    Reverse -> 5
+    S' -> 6
+    o -> 7
+    |_| -> 8
+    Max_Depth -> 9
+    1 -> 10
+    min_int -> 11
+    max_int -> 12
+    0 -> 13
+
+_____________________
+
+[Applied Theorems]:
+LTE_1a:Natural_Number_Theory
+Reverse_2:String_Theory
+Reverse_8:String_Theory
+LTE_1a:Integer_Theory
+Abs_Val_1:Integer_Theory
+Reverse_3:String_Theory
+
+
+NOTE: Not all applied theorems may have actually contributed to the proof
+
+_____________________
+
+[Registry State]:
+CC1 -> (CR1: S ) | (CR5: o CC3, CC4) 
+CC2 -> (CR2: Temp' ) | (CR24: Reverse CC3) 
+CC3 -> (CR3: Reverse CC2) 
+CC4 -> (CR4: S' ) 
+CC5 -> (CR1: S ) | (CR5: o CC3, CC4) 
+CC6 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC7 -> (CR7: Max_Depth ) 
+CC8 -> (CR8: <= CC6, CC7) 
+CC9 -> (CR9: 1 ) 
+CC10 -> (CR10: <= CC9, CC7) 
+CC11 -> (CR11: min_int ) 
+CC12 -> (CR12: <= CC11, CC7) 
+CC13 -> (CR13: max_int ) 
+CC14 -> (CR14: <= CC7, CC13) 
+CC15 -> (CR15: 0 ) 
+CC16 -> (CR16: <= CC11, CC15) 
+CC17 -> (CR17: <= CC9, CC13) 
+CC18 -> (CR18: Reverse CC1) 
+CC19 -> (CR19: = CC2, CC18) [35m(succedent)[0m
+CC20 -> (CR20: |_| CC4) 
+CC21 -> (CR21: <= CC9, CC20) [35m(succedent)[0m
+CC22 -> (CR22: <= CC6, CC13) 
+CC23 -> (CR23: Reverse CC4) 
+CC24 -> (CR2: Temp' ) | (CR24: Reverse CC3) 
+CC25 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC26 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC27 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC28 -> (CR28: Reverse CC6) 
+CC29 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC30 -> (CR30: Reverse CC28) 
+CC31 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC32 -> (CR32: Reverse CC30) 
+CC33 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+CC34 -> (CR34: Reverse CC32) 
+CC35 -> (CR25: o CC23, CC2 [NEXT: CR27]), (CR27: o CC20, CC2) | (CR35: |_| CC34) | (CR33: |_| CC32) | (CR31: |_| CC30) | (CR29: |_| CC28) | (CR26: |_| CC6) | (CR6: |_| CC1) 
+

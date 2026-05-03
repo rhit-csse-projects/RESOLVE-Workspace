@@ -1,0 +1,5 @@
+Enhancement Get_Bottom_Capability for Globally_Bounded_Stack_Template;
+	Operation Get_Bottom(updates E : Entry; updates S : Stack);
+		requires |S| /= 0;
+		ensures #S = S o <E>;
+end Get_Bottom_Capability;

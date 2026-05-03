@@ -1,0 +1,4 @@
+Enhancement Clearing_Writing_Capability for Queue_Template;
+    Operation Write_Queue (clears Q: Queue);
+        --ensures output = #output o #Q;
+end Clearing_Writing_Capability;

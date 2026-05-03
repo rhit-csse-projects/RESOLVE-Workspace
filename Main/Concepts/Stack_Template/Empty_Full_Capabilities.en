@@ -1,0 +1,9 @@
+Enhancement Empty_Full_Capabilities for Stack_Template;
+
+    Operation Is_Empty (restores S: Stack): Boolean;
+        ensures Is_Empty = (|S| = 0);
+
+    Operation Is_Full (restores S: Stack): Boolean;
+        ensures Is_Full = (|S| = Max_Depth);
+
+end Empty_Full_Capabilities;

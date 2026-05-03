@@ -1,0 +1,9 @@
+Enhancement PQ_Rotating_Search_Capability for Preemptable_Queue_Template;
+	Operation Rotate_And_Find (restores Given_Entry: Entry; updates Q: P_Queue;
+									replaces Result: Boolean);
+		ensures ((<Given_Entry> is_substring_of #Q) implies
+					(Result = true and (there exists a, b: Str(Entry) such that
+					#Q = a o <Given_Entry> o b and Q = <Given_Entry> o b o a))) and
+					((not <Given_Entry> is_substring_of #Q) implies
+					Result = false and (Q = #Q));
+end PQ_Rotating_Search_Capability;

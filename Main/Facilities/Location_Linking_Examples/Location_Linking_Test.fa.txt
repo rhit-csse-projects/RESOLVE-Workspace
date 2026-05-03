@@ -1,0 +1,53 @@
+Facility Location_Linking_Test;
+	Facility Location_Linking_Fac is Location_Linking_Template_1(Integer) 
+        	realized by Std_Location_Linking_Realiz;
+
+	Operation Main();
+	Procedure
+
+		Var b: Boolean;
+		Var I, J, K, L, M, temp: Integer;
+		Var Curr, Temp, P, Q, R, S, T, U: Position;
+		Take_New_Location(Curr);
+		Take_New_Location(Temp);
+		Take_New_Location(P);
+		Take_New_Location(Q);
+		Take_New_Location(R);
+		Take_New_Location(S);
+		Take_New_Location(T);
+		
+
+		I := 1;
+		J := 2;
+		K := 3;
+		L := 4;
+		M := 5;
+		
+		Swap_Info(P, I);
+		Redirect_Link(P, Q);
+		Swap_Info(Q, J);
+		Redirect_Link(Q, R);
+		Swap_Info(R, K);
+		Redirect_Link(R, S);
+		Swap_Info(S, L);
+		Redirect_Link(S, T);
+		Swap_Info(T, M);
+		Redirect_Link(T, U);
+		
+		Relocate_to(Curr, P);
+		
+		While(Is_At_Void(Curr) = False())
+            changing Temp, Curr, temp;
+		    maintaining true;
+		do
+			Relocate_to(Temp, Curr);
+			Swap_Info(Temp, temp);
+			Write(temp);
+			Swap_Info(Temp, temp);
+			Relocate_To_Target(Curr, Temp);
+		end;
+
+						
+	end Main;
+
+end Location_Linking_Test;

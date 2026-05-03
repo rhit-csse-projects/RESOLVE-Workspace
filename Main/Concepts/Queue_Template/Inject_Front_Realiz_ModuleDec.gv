@@ -1,0 +1,121 @@
+digraph Inject_Front_Realiz {
+    ordering=out;
+    ranksep=".5 equally";
+    bgcolor="lightgrey";
+
+    node [shape=record, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+          margin=".25,.05", width=.25, height=.25, color="black", fillcolor="white", style="rounded"];
+
+    edge [arrowsize=.5, color="black", style="bold"];
+
+    n3 [label="{ UsesItem | [ Std_Boolean_Fac ] }"]; // UsesItem
+    n4 [label="{ UsesItem | [ Std_Integer_Fac ] }"]; // UsesItem
+    n5 [label="{ UsesItem | [ Std_Character_Fac ] }"]; // UsesItem
+    n6 [label="{ UsesItem | [ Std_Char_Str_Fac ] }"]; // UsesItem
+    n2 [label="{ VirtualListNode | [ UsesItem ] }"]; // VirtualListNode
+    n11 [label="{ NameTy | [ Entry ] }"]; // NameTy
+    n10 [label="{ ParameterVarDec | [ ALTERS E : Entry ] }"]; // ParameterVarDec
+    n13 [label="{ NameTy | [ Queue ] }"]; // NameTy
+    n12 [label="{ ParameterVarDec | [ UPDATES Q : Queue ] }"]; // ParameterVarDec
+    n9 [label="{ VirtualListNode | [ ParameterVarDec ] }"]; // VirtualListNode
+    n16 [label="{ NameTy | [ Queue ] }"]; // NameTy
+    n15 [label="{ VarDec | [ T : Queue ] }"]; // VarDec
+    n14 [label="{ VirtualListNode | [ VarDec ] }"]; // VirtualListNode
+    n21 [label="{ ProgramVariableNameExp | [ E ] }"]; // ProgramVariableNameExp
+    n22 [label="{ ProgramVariableNameExp | [ T ] }"]; // ProgramVariableNameExp
+    n20 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n19 [label="{ ProgramFunctionExp | [ Enqueue(E, T) ] }"]; // ProgramFunctionExp
+    n18 [label="{ CallStmt }"]; // CallStmt
+    n26 [label="{ ProgramIntegerExp | [ 1 ] }"]; // ProgramIntegerExp
+    n29 [label="{ ProgramVariableNameExp | [ Q ] }"]; // ProgramVariableNameExp
+    n28 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n27 [label="{ ProgramFunctionExp | [ Length(Q) ] }"]; // ProgramFunctionExp
+    n25 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n24 [label="{ ProgramFunctionExp | [ Less&#95;Or&#95;Equal(1, Length(Q)) ] }"]; // ProgramFunctionExp
+    n32 [label="{ ProgramVariableNameExp | [ Q ] }"]; // ProgramVariableNameExp
+    n33 [label="{ ProgramVariableNameExp | [ T ] }"]; // ProgramVariableNameExp
+    n34 [label="{ ProgramVariableNameExp | [ E ] }"]; // ProgramVariableNameExp
+    n31 [label="{ VirtualListNode | [ ProgramVariableExp ] }"]; // VirtualListNode
+    n36 [label="{ VarExp | [ true ] }"]; // VarExp
+    n35 [label="{ AssertionClause | [ MAINTAINING ] }"]; // AssertionClause
+    n39 [label="{ VarExp | [ Q ] }"]; // VarExp
+    n38 [label="{ OutfixExp | [ &nbsp;&#124;&#95;&#124;&nbsp; ] }"]; // OutfixExp
+    n37 [label="{ AssertionClause | [ DECREASING ] }"]; // AssertionClause
+    n30 [label="{ LoopVerificationItem }"]; // LoopVerificationItem
+    n44 [label="{ ProgramVariableNameExp | [ E ] }"]; // ProgramVariableNameExp
+    n45 [label="{ ProgramVariableNameExp | [ Q ] }"]; // ProgramVariableNameExp
+    n43 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n42 [label="{ ProgramFunctionExp | [ Dequeue(E, Q) ] }"]; // ProgramFunctionExp
+    n41 [label="{ CallStmt }"]; // CallStmt
+    n49 [label="{ ProgramVariableNameExp | [ E ] }"]; // ProgramVariableNameExp
+    n50 [label="{ ProgramVariableNameExp | [ T ] }"]; // ProgramVariableNameExp
+    n48 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n47 [label="{ ProgramFunctionExp | [ Enqueue(E, T) ] }"]; // ProgramFunctionExp
+    n46 [label="{ CallStmt }"]; // CallStmt
+    n40 [label="{ VirtualListNode | [ Statement ] }"]; // VirtualListNode
+    n23 [label="{ WhileStmt }"]; // WhileStmt
+    n52 [label="{ ProgramVariableNameExp | [ Q ] }"]; // ProgramVariableNameExp
+    n53 [label="{ ProgramVariableNameExp | [ T ] }"]; // ProgramVariableNameExp
+    n51 [label="{ SwapStmt }"]; // SwapStmt
+    n17 [label="{ VirtualListNode | [ Statement ] }"]; // VirtualListNode
+    n8 [label="{ ProcedureDec | [ Inject_at_Front ] }"]; // ProcedureDec
+    n7 [label="{ VirtualListNode | [ Dec ] }"]; // VirtualListNode
+    n55 [label="{ VarExp | [ true ] }"]; // VarExp
+    n54 [label="{ AssertionClause | [ REQUIRES ] }"]; // AssertionClause
+    n1 [label="{ EnhancementRealizModuleDec | [ Inject_Front_Realiz ] }"]; // EnhancementRealizModuleDec
+
+    n1 -> n2
+    n2 -> n3
+    n2 -> n4
+    n2 -> n5
+    n2 -> n6
+    n1 -> n7
+    n7 -> n8
+    n8 -> n9
+    n9 -> n10
+    n10 -> n11
+    n9 -> n12
+    n12 -> n13
+    n8 -> n14
+    n14 -> n15
+    n15 -> n16
+    n8 -> n17
+    n17 -> n18
+    n18 -> n19
+    n19 -> n20
+    n20 -> n21
+    n20 -> n22
+    n17 -> n23
+    n23 -> n24
+    n24 -> n25
+    n25 -> n26
+    n25 -> n27
+    n27 -> n28
+    n28 -> n29
+    n23 -> n30
+    n30 -> n31
+    n31 -> n32
+    n31 -> n33
+    n31 -> n34
+    n30 -> n35
+    n35 -> n36
+    n30 -> n37
+    n37 -> n38
+    n38 -> n39
+    n23 -> n40
+    n40 -> n41
+    n41 -> n42
+    n42 -> n43
+    n43 -> n44
+    n43 -> n45
+    n40 -> n46
+    n46 -> n47
+    n47 -> n48
+    n48 -> n49
+    n48 -> n50
+    n17 -> n51
+    n51 -> n52
+    n51 -> n53
+    n1 -> n54
+    n54 -> n55
+}

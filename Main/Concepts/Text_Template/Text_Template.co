@@ -1,0 +1,25 @@
+Concept Text_Template;
+    uses String_Theory;
+
+	(* Note: Under Construction! *)
+	
+--    Defines Max_Size: N;
+--    constraints Max_Size > 0;
+
+	Type Family Text is modeled by Str(N);
+		exemplar S;
+		--constraint |S| <= Max_Size;
+		initialization ensures S = Empty_String;
+	end;
+ 
+    Operation Add(restores C: Character; updates S: Text);
+--        requires |S| < Max_Size;
+        ensures S = #S o <C>;
+ 
+    Operation Remove(updates C: Character; updates S: Text);
+        requires S /= Empty_String;
+        ensures #S = <C> o S;
+
+    Operation Is_Empty(restores S: Text): Boolean;
+        ensures Is_Empty = (S = Empty_String);
+end Text_Template;

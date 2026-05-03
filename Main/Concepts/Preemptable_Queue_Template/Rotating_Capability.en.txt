@@ -1,0 +1,5 @@
+Enhancement Rotating_Capability for Preemptable_Queue_Template;
+	Operation Rotate (updates Q: P_Queue; evaluates n: Integer);
+		requires 0 <= n <= |Q|;
+		ensures Q = Prt_Btwn(n, |#Q|, #Q) o Prt_Btwn(0, n, #Q);
+end Rotating_Capability;

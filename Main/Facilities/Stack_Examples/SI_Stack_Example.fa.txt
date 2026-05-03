@@ -1,0 +1,30 @@
+-- single instance stack example
+Facility SI_Stack_Example;
+    uses SI_Stack_Template;
+
+    Facility S1 is SI_Stack_Template(Integer, 5)
+        realized by SI_Array_Realiz;
+
+    Facility S2 is SI_Stack_Template(Integer, 5)
+        realized by SI_Array_Realiz;
+        
+    Operation Main();
+    Procedure
+        Var I: Integer;
+
+        Read(I);
+        S1.Push(I);
+        Read(I);
+        S1.Push(I);
+
+        S1.Pop(I);
+        S2.Push(I);        
+        S1.Pop(I);
+        S2.Push(I);
+
+        S2.Pop(I);
+        Write_Line(I);
+        S2.Pop(I);
+        Write_Line(I);
+    end Main;
+end SI_Stack_Example;

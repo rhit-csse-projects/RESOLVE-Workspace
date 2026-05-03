@@ -1,0 +1,34 @@
+Facility Naive_Queue_Averaging_Facility;
+
+    Facility Integer_Queue_Fac is Queue_Template(Integer, 9)
+    	realized by Circular_Array_Realiz;
+
+    Definition Holds_For_Each(S : Str(Z), f : (Z -> B)) : B;
+
+    Operation Queue_Average(restores Q : Integer_Queue_Fac.Queue) : Integer;
+		requires Q /= Empty_String and Holds_For_Each(Q, Non_Negative);
+		ensures Queue_Average = Fold_String_Right(Sum, 0, Q) / |Q|;
+	Procedure
+		Var Cur_Entry : Integer;
+		Var Included : Integer_Queue_Fac.Queue;
+		Var Total : Integer;
+
+		While (Length(Q) > 0)
+			changing Cur_Entry, Included, Q, Total;
+			maintaining Included o Q = #Q and
+				Total = Fold_String_Right(Sum, 0, Included);
+			decreasing |Q|;
+		do
+			Dequeue(Cur_Entry, Q);
+            
+            Total := Total + Cur_Entry;
+
+			Enqueue(Cur_Entry, Included);
+		end;
+
+		Q :=: Included;
+
+		Queue_Average := Total / Length(Q);
+	end;
+
+end Naive_Queue_Averaging_Facility;

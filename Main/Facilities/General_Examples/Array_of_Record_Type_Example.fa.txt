@@ -1,0 +1,41 @@
+-- Example of a local array of record type
+Facility Array_of_Record_Type_Example;
+    Type Example_Record = Record
+				I: Integer;
+				J: Integer;
+			end;
+
+    Type Example_Array = Array 1..10 of Example_Record;
+    --Type Example_Array = Array 1..10 of Integer;
+
+    Operation Main();
+    Procedure
+	Var A: Example_Array;
+	Var R, S: Example_Record;
+	Var I, J: Integer;
+
+	I := 17;
+	J := 27;
+	Write(I);
+	Write(J);
+
+	--A[3].I :=: I; --this doesn't work
+	--A[3].I := 5;
+	--J :=: A[3].I;
+	--Write(J);
+	--Write(A[3].I);
+
+	--R.I :=: I;
+	--I :=: R.I;
+	--R.J :=: J;
+	
+	--A[3] :=: R;
+	--A[3] :=: S;
+	--S :=: A[3];
+	--Write(S.I);
+	--Write(S.J);
+	
+	--A[3] :=: R;
+    end Main;
+
+end Array_of_Record_Type_Example;

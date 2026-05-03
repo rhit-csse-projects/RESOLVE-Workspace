@@ -1,0 +1,44 @@
+Concept Map_Template (Type Key; Type Info; evaluates Max_Size: Integer);
+	requires 0 < Max_Size;
+	
+	(* Note: Under Construction! *)
+
+	Type Family Map is modeled by
+		Cart_Prod
+			Mapping : (Key -> Info);
+			KeySet : Set(Key);
+		end;
+		exemplar M;
+		initialization
+			ensures
+				M.KeySet = empty_set;
+	end;
+
+	Operation Put(restores k : Key; alters I : Info; updates M : Map);
+		requires	||M.KeySet|| < Max_Size and
+				k is_not_in M.KeySet;
+		ensures 	M.Mapping(k) = #I and 
+				M.KeySet = #M.KeySet union Singleton(k) and
+				(For all l: Key, if l is_in #M.KeySet then
+					M.Mapping(l) = #M.Mapping(l));
+
+	Operation Retrieve(restores k : Key; replaces I : Info; 
+			updates M : Map);
+		requires	k is_in M.KeySet;
+		ensures		k is_not_in M.KeySet and
+				(For all l: Key, if l is_in M.KeySet then
+					M.Mapping(l) = #M.Mapping(l));
+
+	Operation Get_Any_Key(restores M : Map) : Key;
+		requires	||M.KeySet|| > 0;
+		ensures		Get_Any_Key is_in M.KeySet;
+
+	Oper Element_Count(restores M: Map) : Integer;
+		ensures 	Element_Count = ||M.KeySet||;
+
+	Oper Remaining_Capacity(restores M: Map) : Integer;
+		ensures 	Remaining_Capacity =  Max_Size + (-||M.KeySet||);
+
+	Oper Clear(clears M: Map);
+
+end Map_Template;

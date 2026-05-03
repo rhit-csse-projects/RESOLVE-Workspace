@@ -1,0 +1,5 @@
+Enhancement List_Flipping_Capability for Globally_Bounded_List_Template;
+    Operation Flip_Rem (updates P: List);
+        requires P.Prec = Empty_String;
+        ensures P.Prec = Reverse(#P.Rem) and P.Rem = Empty_String;
+end List_Flipping_Capability;

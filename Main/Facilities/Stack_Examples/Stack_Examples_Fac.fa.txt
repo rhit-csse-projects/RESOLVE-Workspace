@@ -1,0 +1,36 @@
+--This is an exercise; need to include a proper loop invariant to prove.
+Facility Stack_Examples_Fac;
+	uses String_Theory;
+
+	Facility Rev_Stack_Fac is Stack_Template(Char_Str, 5)
+		realized by Array_Realiz;
+
+	Operation Flip_onto(clears S: Stack; updates T: Stack);
+		-- leave out the requires clause for the first pass and see if students can find its need; note Max_Depth is 5
+		requires |S| + |T| <= 5;
+		ensures T = Reverse(#S) o #T;
+	Procedure
+		Var Next_Entry: Char_Str;
+		Var D: Integer;
+
+		D := Depth(S);
+		While (D /= 0)
+			-- motivate the second conjunct of the loop invariant first
+			-- use this example S = <1, 2, 3> and T = <4, 5, 6> and
+			-- look at values of S and T at the beginning of successive iterations to motivate invaraint
+			-- discuss keeping the RHS of ensures clause involving input values the same in the invariant
+			maintaining true;
+			decreasing |S|;
+		do
+			Pop(Next_Entry, S);
+			Push(Next_Entry, T);
+			D := Depth(S);
+		end;
+	end Flip_onto;
+
+	Operation Main();
+	Procedure
+		
+	end Main;
+
+end Stack_Examples_Fac;

@@ -1,0 +1,28 @@
+Concept Sequence_Template(type Entry; evaluates Max_Length: Integer);
+	uses String_Theory, Integer_Ext_Theory;
+	requires 1 <= Max_Length;
+ 
+	Type Family Sequence is modeled by Str(Entry);
+		exemplar S;
+		constraint |S| <= Max_Length;
+		initialization ensures S = Empty_String;
+	end;
+
+	Operation Insert_after(evaluates Pos: Integer; alters E: Entry; updates S: Sequence);
+		requires 0 <= Pos and Pos <= |S| and 1 + |S| <= Max_Length;
+		ensures S = (Prt_Btwn(0, #Pos, #S) o <#E>) o Prt_Btwn(#Pos, |#S|, #S);
+ 
+	Operation Remove_after(evaluates Pos: Integer; replaces R: Entry; updates S: Sequence);
+		requires 0 <= Pos and 1 + Pos <= |S| and 1 <= |S|;
+		ensures S = (Prt_Btwn(0, #Pos, #S) o Prt_Btwn(#Pos + 1, |#S|, #S)) and 
+				R = DeString(Prt_Btwn(#Pos, #Pos + 1, #S));
+
+	Operation Length(restores S: Sequence): Integer;
+		ensures Length = (|S|);
+ 
+	Operation Rem_Capacity(restores S: Sequence): Integer;
+		ensures Rem_Capacity = (Max_Length - |S|);
+ 
+	Operation Clear(clears S: Sequence);
+ 
+end Sequence_Template;

@@ -1,0 +1,4 @@
+Enhancement Inverting_Capability for Preemptable_Queue_Template;
+    Operation Invert (updates Q: P_Queue);
+        ensures Q = Reverse(#Q);
+end Inverting_Capability;

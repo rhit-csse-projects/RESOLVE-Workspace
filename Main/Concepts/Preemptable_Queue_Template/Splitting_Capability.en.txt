@@ -1,0 +1,8 @@
+Enhancement Splitting_Capability for Preemptable_Queue_Template;
+
+	Operation Split (updates P: P_Queue; replaces Q: P_Queue; 
+			evaluates n: Integer);
+		requires 0 <= n <= |P|;
+		ensures P = Prt_Btwn(0, n, #P) and Q = Prt_Btwn(n, |#P|, #P);
+
+end Splitting_Capability;

@@ -1,0 +1,80 @@
+
+Concept Integer_Template;
+    uses Integer_Theory;
+    requires min_int <= 0 < max_int;
+
+    Definition min_int: Z;
+    Definition max_int: Z;
+
+    --Constraint min_int <= 0 < max_int;
+
+    Type Family Integer is modeled by Z;
+        exemplar i;
+        constraint min_int <= i <= max_int;
+        initialization ensures i = 0;
+
+    Operation Is_Zero(evaluates i: Integer): Boolean;
+        ensures	Is_Zero = ( i = 0 );
+
+    Operation Is_Not_Zero(evaluates i: Integer): Boolean;
+        ensures	Is_Not_Zero = (not ( i = 0 ));
+
+    Operation Increment(updates i: Integer);
+        requires i + 1 <= max_int;
+        ensures	i = #i + 1;
+
+    Operation Decrement(updates i: Integer);
+        requires min_int <= i - 1;
+        ensures	i = #i - 1;
+
+    Operation Less_Or_Equal(evaluates i, j: Integer): Boolean;
+        ensures	Less_Or_Equal = ( i <= j );
+
+    Operation Less(evaluates i, j: Integer): Boolean;
+        ensures Less = ( i < j );
+
+    Operation Greater(evaluates i, j: Integer): Boolean;
+        ensures Greater = ( i > j );
+
+    Operation Greater_Or_Equal(evaluates i, j: Integer): Boolean;
+        ensures Greater_Or_Equal = ( i >= j );
+
+    Operation Sum(evaluates i, j: Integer): Integer;
+        requires min_int <= i + j <= max_int;
+        ensures	Sum = ( i + j );
+
+    Operation Negative(evaluates i: Integer): Integer;
+        requires min_int <= -i <= max_int;
+        ensures Negative = ( -i );
+
+    Operation Difference(evaluates i, j: Integer): Integer;
+        requires min_int <= i - j <= max_int;
+        ensures Difference = ( i - j );
+
+    Operation Product(evaluates i, j: Integer): Integer;
+        requires min_int <= i * j <= max_int;
+        ensures Product = ( i * j );
+
+    Operation Power(evaluates i, j: Integer): Integer;
+        requires min_int <= i**j <= max_int;
+        ensures Power = ( i**j );
+
+    Operation Quotient(evaluates i, j: Integer): Integer;
+        ensures true; -- this needs a {{ }} expression
+
+    Operation Mod(evaluates i, j: Integer): Integer;
+
+    Operation Rem(evaluates i, j: Integer): Integer;
+
+    Operation Div(evaluates i, j: Integer): Integer;
+
+    Operation Are_Equal(evaluates i, j: Integer): Boolean;
+        ensures i = j;
+
+    Operation Are_Not_Equal(evaluates i, j: Integer): Boolean;
+        ensures i /= j;
+
+    Operation Replica(restores i: Integer): Integer;
+        ensures Replica = i;
+
+end Integer_Template;

@@ -1,0 +1,43 @@
+Facility Queue_Sort_User_Facility;
+       uses Queue_Template;
+
+    Type Student_Info = Record
+        Name: Char_Str;
+        Rank: Integer;
+        Age: Integer;
+    end; 
+    Definition Rank_LEQV(S1,S2: Student_Info): Boolean = (S1.Rank <= S2.Rank);
+    Definition Age_GEQV(S1, S2: Student_Info): Boolean = (S1.Age >= S2.Age);
+
+    Operation Rank_Order(restores S1, S2: Student_Info): Boolean;
+        ensures Rank_Order = (Rank_LEQV(S1, S2));
+      Procedure
+        Rank_Order := (S1.Rank <= S2.Rank);
+    end Rank_Order;
+
+    Facility QF is Queue_Template(Student_Info, 10)
+       realized by Circular_Array_Realiz
+       enhanced by Sorting_Capability(Rank_LEQV)
+         realized by Selection_Sort_Realization(Rank_Order);
+        
+    Operation Main();
+    Procedure
+        Var S1, S2, S3, Temp: Student_Info;
+        Var Q: QF.Queue;
+
+        S1.Rank := 2;
+        S2.Rank := 3;
+        S3.Rank := 1;
+
+        Enqueue(S1, Q);
+        Enqueue(S2, Q);
+        Enqueue(S3, Q);
+        Sort(Q);
+        Dequeue(Temp, Q);
+        Write_Line(Temp.Rank);
+        Dequeue(Temp, Q);
+        Write_Line(Temp.Rank);
+        Dequeue(Temp, Q);
+        Write_Line(Temp.Rank);
+    end Main;
+end Queue_Sort_User_Facility;

@@ -1,0 +1,33 @@
+Concept SI_Stack_Template(type Entry; evaluates Max_Depth: Integer);
+    uses String_Theory;
+    requires Max_Depth > 0;
+	
+	(* Note: Under Construction! *)
+
+    Var Self: Str(Entry); 
+        constraint |Self| <= Max_Depth;
+        Facility_Initialization 
+		ensures Self = Empty_String;
+
+    Operation Push(alters E: Entry); 
+        updates Self;
+        requires 1 + |Self| <= Max_Depth;
+        ensures  Self = <#E> o #Self;
+
+    Operation Pop(replaces R: Entry);
+        updates Self;
+        requires |Self| > 0;
+        ensures #Self = <R> o Self;
+
+    Operation Depth(): Integer;
+        restores Self;
+        ensures Depth = (|Self|);
+
+    Operation Rem_Capacity(): Integer;
+        restores Self;
+        ensures Rem_Capacity = (Max_Depth - |Self|);
+
+    Operation Clear();
+        clears Self;
+
+end SI_Stack_Template;

@@ -1,0 +1,28 @@
+Facility Grid_Positioning_Activities;
+	uses Integer_Theory, Integer_Ext_Theory;
+
+	Facility GPF is Grid_Positioning_Template(3, 3)
+		realized by Grid_Positioning_Realiz;
+
+	-- This will not prove unless one of the activities below is completed successfully
+
+	-- Activity 1: Write code to position grid correctly
+	-- Activity 1-a: What is wrong with this code?
+
+	-- Activity 2: Write specification for a Move_NE operation
+	-- Activity 2-a What is wrong with this specifiation?
+	-- Activity 2-b: Write code for the above operation and use it in Main
+
+	-- Activity 3: Write recursive solutions, Move_to_Max_Right and Move_to_Max_Top and use them in Main
+
+	-- Activity 4: Write iterative code
+
+	Operation Main();
+	Procedure
+		Var GP: Grid_Pos;
+
+		Confirm GP.X = 3;
+		Confirm GP.Y = 3;
+	end Main;
+
+end Grid_Positioning_Activities;

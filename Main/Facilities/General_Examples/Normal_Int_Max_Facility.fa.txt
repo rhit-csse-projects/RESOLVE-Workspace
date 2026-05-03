@@ -1,0 +1,13 @@
+Facility Normal_Int_Max_Facility;
+
+	Operation Max(restores I: Integer; restores J: Integer) : Integer;
+		ensures (Max >= I) and (Max >= J) and (Max = I or Max = J);
+	Procedure
+		If (I >= J) then
+			Max := I;
+		else
+			Max := J;
+		end;
+	end Max;
+
+end Normal_Int_Max_Facility;

@@ -1,0 +1,29 @@
+-- Example of a local array type
+Facility Array_Type_Example;           
+    Type Example = Array 1..50 of Integer;
+    Type Example2 = Array 1..100 of Integer;
+
+    Operation Main();
+    Procedure
+
+	Var A: Example;
+	Var C: Example2;
+
+	Var I, J, K: Integer;
+
+	I := 17;
+	J := 27;
+	Write(I);
+	Write(J);
+
+	A[3] :=: I;
+	--I :=: A[3];
+	--A[3] :=: J;
+	J :=: A[3];
+	--A[3] :=: K;
+	K :=: A[3];
+	Write(J);
+	Write(K);
+    end Main;
+
+end Array_Type_Example;

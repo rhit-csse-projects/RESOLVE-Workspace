@@ -1,0 +1,28 @@
+-- example of a stack of Boolean's that can be printed
+Facility BPStack;
+	uses String_Theory;
+
+	Facility Boolean_Stack_Fac is Stack_Template(Boolean, 5)
+			realized by Array_Realiz
+		enhanced by Writing_Capability
+			realized by Obvious_Writing_Realiz(Std_Boolean_Fac.Write);
+
+	Operation Main();
+	Procedure
+		Var S1, S2: Stack;
+		Var b: Boolean;
+
+		b := True();
+		Push(b, S1);
+		b := False();
+		Push(b, S1);
+		b := True();
+		Push(b, S1);
+
+		Write(S1);
+		S1 :=: S2;
+		Write_Line("");
+		Write(S2);
+	end Main;
+
+end BPStack;

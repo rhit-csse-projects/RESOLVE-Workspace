@@ -1,0 +1,16 @@
+Enhancement Fold_Capability(type T;
+			Definition Combined(a : T, f : Entry) : T)
+		for Queue_Template;
+		uses String_Theory;
+		
+    (* Note: Under Construction! *)
+
+	Operation Fold_Right(updates Accumulator : T; restores List : Queue);
+		ensures Accumulator = 
+			Fold_String_Right(Combined, #Accumulator, List);
+
+	Operation Fold_Left(restores List : Queue; updates Accumulator : T);
+		ensures Accumulator = 
+			Fold_String_Left(Combined, List, #Accumulator);
+
+end Fold_Capability;

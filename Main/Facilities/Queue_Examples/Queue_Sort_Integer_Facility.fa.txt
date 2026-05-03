@@ -1,0 +1,47 @@
+Facility Queue_Sort_Integer_Facility;
+       uses Queue_Template;
+
+    Definition Int_LEQV(x,y: Z): Boolean = (x <= y);
+
+    Operation Order(restores x,y: Integer): Boolean;
+        ensures Order = (Int_LEQV(x,y));
+      Procedure
+        Order := (x <= y);
+    end Order;
+
+    Facility QF is Queue_Template(Integer, 10)
+       realized by Circular_Array_Realiz
+       enhanced by Sorting_Capability(Int_LEQV)
+         realized by Selection_Sort_Realization(Order);
+        
+    Operation Main();
+    Procedure
+
+       Var C, D, E, F: Integer;
+       Var Q: QF.Queue;
+
+       C := 150;
+	   D := 300;
+	   E := 7;
+	   F := 9;
+	   
+       Enqueue(C, Q);
+       Enqueue(D, Q);
+       Enqueue(E, Q);
+       Enqueue(F, Q);
+	   
+       Sort(Q);
+	   
+	   Dequeue(C, Q);
+	   Dequeue(D, Q);
+	   Dequeue(E, Q);
+	   Dequeue(F, Q);
+	   
+	   Write(C);
+	   Write(D);
+	   Write(E);
+	   Write(F);
+
+    end Main;
+
+end Queue_Sort_Integer_Facility;

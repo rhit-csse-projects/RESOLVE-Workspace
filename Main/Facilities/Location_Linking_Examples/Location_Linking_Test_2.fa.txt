@@ -1,0 +1,71 @@
+Facility Location_Linking_Test_2;
+	Facility Location_Linking_Fac is Location_Linking_Template_1(Integer) 
+        	realized by Std_Location_Linking_Realiz;
+
+	Operation Main();
+	Procedure
+
+		Var I, temp, target: Integer;
+		Var Head, Curr, P, Q: Position;
+		Take_New_Location(Head);
+		Take_New_Location(Curr);
+		Take_New_Location(P);
+		Take_New_Location(Q);
+
+		I := 0;
+
+		Relocate_to(Curr, Head);
+
+		
+		While(I < 5)
+			changing temp, I, P;
+			maintaining true;
+		do
+			temp := I;
+			Write(temp);
+			Swap_Info(Curr, temp);
+			Take_New_Location(P);
+			Redirect_Link(Curr, P);
+			Relocate_to(Curr, P);
+			I := I + 1;
+		end;
+		
+		Relocate_to(Curr, Head);
+
+		
+		target := 3;
+		While(Is_At_Void(Curr) = False())
+			changing Curr, temp, Q, I, P;
+			maintaining true;
+		do
+			Swap_Info(Curr, temp);
+			Take_New_Location(Q);
+			Relocate_To_Target(Q, Curr);
+			if (temp = target) then
+				temp := 9;
+				Take_New_Location(P);
+				Swap_Info(P, temp);
+				Redirect_Link(Curr, P);
+				Redirect_Link(P, Q);
+				temp := target;
+			end;
+			Swap_Info(Curr, temp);
+			Relocate_to(Curr, Q);
+		end;
+
+		Relocate_to(Curr, Head);
+
+		
+		While(Is_At_Void(Curr) = False())
+            changing Q, Curr, temp;
+		    maintaining true;
+		do
+			Relocate_to(Q, Curr);
+			Swap_Info(Q, temp);
+			Write(temp);
+			Swap_Info(Q, temp);
+			Relocate_To_Target(Curr, Q);
+		end;	
+	end Main;
+
+end Location_Linking_Test_2;

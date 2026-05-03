@@ -1,0 +1,127 @@
+digraph Obvious_Flipping_Realiz {
+    ordering=out;
+    ranksep=".5 equally";
+    bgcolor="lightgrey";
+
+    node [shape=record, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+          margin=".25,.05", width=.25, height=.25, color="black", fillcolor="white", style="rounded"];
+
+    edge [arrowsize=.5, color="black", style="bold"];
+
+    n3 [label="{ UsesItem | [ Std_Boolean_Fac ] }"]; // UsesItem
+    n4 [label="{ UsesItem | [ Std_Integer_Fac ] }"]; // UsesItem
+    n5 [label="{ UsesItem | [ Std_Character_Fac ] }"]; // UsesItem
+    n6 [label="{ UsesItem | [ Std_Char_Str_Fac ] }"]; // UsesItem
+    n2 [label="{ VirtualListNode | [ UsesItem ] }"]; // VirtualListNode
+    n11 [label="{ NameTy | [ Stack ] }"]; // NameTy
+    n10 [label="{ ParameterVarDec | [ UPDATES S : Stack ] }"]; // ParameterVarDec
+    n9 [label="{ VirtualListNode | [ ParameterVarDec ] }"]; // VirtualListNode
+    n14 [label="{ NameTy | [ Stack ] }"]; // NameTy
+    n13 [label="{ VarDec | [ Temp : Stack ] }"]; // VarDec
+    n16 [label="{ NameTy | [ Entry ] }"]; // NameTy
+    n15 [label="{ VarDec | [ Next&#95;Entry : Entry ] }"]; // VarDec
+    n12 [label="{ VirtualListNode | [ VarDec ] }"]; // VirtualListNode
+    n21 [label="{ ProgramIntegerExp | [ 1 ] }"]; // ProgramIntegerExp
+    n24 [label="{ ProgramVariableNameExp | [ S ] }"]; // ProgramVariableNameExp
+    n23 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n22 [label="{ ProgramFunctionExp | [ Depth(S) ] }"]; // ProgramFunctionExp
+    n20 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n19 [label="{ ProgramFunctionExp | [ Less&#95;Or&#95;Equal(1, Depth(S)) ] }"]; // ProgramFunctionExp
+    n27 [label="{ ProgramVariableNameExp | [ S ] }"]; // ProgramVariableNameExp
+    n28 [label="{ ProgramVariableNameExp | [ Temp ] }"]; // ProgramVariableNameExp
+    n29 [label="{ ProgramVariableNameExp | [ Next&#95;Entry ] }"]; // ProgramVariableNameExp
+    n26 [label="{ VirtualListNode | [ ProgramVariableExp ] }"]; // VirtualListNode
+    n33 [label="{ VarExp | [ S ] }"]; // VarExp
+    n32 [label="{ OldExp | [ #S ] }"]; // OldExp
+    n36 [label="{ VarExp | [ Reverse ] }"]; // VarExp
+    n38 [label="{ VarExp | [ Temp ] }"]; // VarExp
+    n37 [label="{ VirtualListNode | [ Exp ] }"]; // VirtualListNode
+    n35 [label="{ FunctionExp | [ Reverse ] }"]; // FunctionExp
+    n39 [label="{ VarExp | [ S ] }"]; // VarExp
+    n34 [label="{ InfixExp | [ o ] }"]; // InfixExp
+    n31 [label="{ EqualsExp | [ = ] }"]; // EqualsExp
+    n30 [label="{ AssertionClause | [ MAINTAINING ] }"]; // AssertionClause
+    n42 [label="{ VarExp | [ S ] }"]; // VarExp
+    n41 [label="{ OutfixExp | [ &nbsp;&#124;&#95;&#124;&nbsp; ] }"]; // OutfixExp
+    n40 [label="{ AssertionClause | [ DECREASING ] }"]; // AssertionClause
+    n25 [label="{ LoopVerificationItem }"]; // LoopVerificationItem
+    n47 [label="{ ProgramVariableNameExp | [ Next&#95;Entry ] }"]; // ProgramVariableNameExp
+    n48 [label="{ ProgramVariableNameExp | [ S ] }"]; // ProgramVariableNameExp
+    n46 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n45 [label="{ ProgramFunctionExp | [ Pop(Next&#95;Entry, S) ] }"]; // ProgramFunctionExp
+    n44 [label="{ CallStmt }"]; // CallStmt
+    n52 [label="{ ProgramVariableNameExp | [ Next&#95;Entry ] }"]; // ProgramVariableNameExp
+    n53 [label="{ ProgramVariableNameExp | [ Temp ] }"]; // ProgramVariableNameExp
+    n51 [label="{ VirtualListNode | [ ProgramExp ] }"]; // VirtualListNode
+    n50 [label="{ ProgramFunctionExp | [ Push(Next&#95;Entry, Temp) ] }"]; // ProgramFunctionExp
+    n49 [label="{ CallStmt }"]; // CallStmt
+    n43 [label="{ VirtualListNode | [ Statement ] }"]; // VirtualListNode
+    n18 [label="{ WhileStmt }"]; // WhileStmt
+    n55 [label="{ ProgramVariableNameExp | [ Temp ] }"]; // ProgramVariableNameExp
+    n56 [label="{ ProgramVariableNameExp | [ S ] }"]; // ProgramVariableNameExp
+    n54 [label="{ SwapStmt }"]; // SwapStmt
+    n17 [label="{ VirtualListNode | [ Statement ] }"]; // VirtualListNode
+    n8 [label="{ ProcedureDec | [ Flip ] }"]; // ProcedureDec
+    n7 [label="{ VirtualListNode | [ Dec ] }"]; // VirtualListNode
+    n58 [label="{ VarExp | [ true ] }"]; // VarExp
+    n57 [label="{ AssertionClause | [ REQUIRES ] }"]; // AssertionClause
+    n1 [label="{ EnhancementRealizModuleDec | [ Obvious_Flipping_Realiz ] }"]; // EnhancementRealizModuleDec
+
+    n1 -> n2
+    n2 -> n3
+    n2 -> n4
+    n2 -> n5
+    n2 -> n6
+    n1 -> n7
+    n7 -> n8
+    n8 -> n9
+    n9 -> n10
+    n10 -> n11
+    n8 -> n12
+    n12 -> n13
+    n13 -> n14
+    n12 -> n15
+    n15 -> n16
+    n8 -> n17
+    n17 -> n18
+    n18 -> n19
+    n19 -> n20
+    n20 -> n21
+    n20 -> n22
+    n22 -> n23
+    n23 -> n24
+    n18 -> n25
+    n25 -> n26
+    n26 -> n27
+    n26 -> n28
+    n26 -> n29
+    n25 -> n30
+    n30 -> n31
+    n31 -> n32
+    n32 -> n33
+    n31 -> n34
+    n34 -> n35
+    n35 -> n36
+    n35 -> n37
+    n37 -> n38
+    n34 -> n39
+    n25 -> n40
+    n40 -> n41
+    n41 -> n42
+    n18 -> n43
+    n43 -> n44
+    n44 -> n45
+    n45 -> n46
+    n46 -> n47
+    n46 -> n48
+    n43 -> n49
+    n49 -> n50
+    n50 -> n51
+    n51 -> n52
+    n51 -> n53
+    n17 -> n54
+    n54 -> n55
+    n54 -> n56
+    n1 -> n57
+    n57 -> n58
+}
