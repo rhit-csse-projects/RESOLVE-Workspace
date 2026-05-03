@@ -193,8 +193,7 @@ Theorem NN_LTE_Addition_b:
 Theorem Not_LTE_1:
 	For all n:N,
 		not(1 <= n) = (n = 0);
--- restatement below
-		
+
 Theorem Zero_min:
 	For all n:N,
 		0 <= n;
